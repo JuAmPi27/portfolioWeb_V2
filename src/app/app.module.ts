@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { HeaderComponent } from './components/header/header.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { SkillsComponent } from './components/skills/skills.component';
@@ -15,7 +14,6 @@ import { InicioComponent } from './components/inicio/inicio.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    HeaderComponent,
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,

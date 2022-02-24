@@ -30,6 +30,9 @@ body {
     text-decoration: underline;
     text-shadow: 3px 5px 15px #222;
 }
+.nav-icon:hover {
+    text-shadow: 2px 4px 15px #fff;
+}
 .btn-login {
     letter-spacing: 2px;
 }
@@ -43,7 +46,23 @@ body {
     height: auto; 
 }
 
+/* inicio */
+.inicio {
+    background-image: url("assets/fondo1.jpg");
+    background-size: cover; 
+    height: 500px;
+}
+.h1-inicio {
+    font-family: 'Rammetto One', cursive;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
 /* experiencia laboral */
+.h5-titulos {
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 4px;
+}
 .experiencia{
     background-image: url("assets/fondo4.png");
     background-size: cover; 
