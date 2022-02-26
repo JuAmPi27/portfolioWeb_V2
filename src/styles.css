@@ -49,8 +49,10 @@ body {
 .inicio {
     background-image: url("assets/mundo.jpg");
     background-size: cover; 
-    height: 500px;
+    height: 550px;
+    border: 1px solid #fff;
 }
+
 .h1-inicio {
     font-family: 'Russo One', sans-serif;
     color: #fff;
@@ -58,11 +60,61 @@ body {
 }
 .p1-inicio {
     font-family: 'Barriecito', cursive;
-    text-shadow: 2px 6px 15px #fff;
+    text-shadow: 2px 4px 15px #fff;
     letter-spacing: 4px;
 }
 .dropdown {
     margin-top: -5px;
+}
+.dropdown-menu {
+    font-family: 'Oswald', sans-serif;
+}
+.btn-sobreMi {
+    font-family: 'Barriecito', cursive;
+    letter-spacing: 4px;
+}
+
+/* datos personales */
+.fondo-datos {
+    background-image: url("assets/fondo1.jpg");
+    background-size: cover;
+    border: 1px solid #fff;
+    height: 650px;
+}
+.foto-carnet {
+    height: 40%;
+    border: 1px solid #000;
+    margin-left: 70px;
+}
+.acerca-de {
+    font-family: 'Barriecito', cursive;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 15px rgba(31, 218, 6, 0.788);
+}
+.lista-datos {
+    list-style:  none;
+}
+.nombre {
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 4px;
+}
+.titulo {
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 4px;
+    color: #fff; 
+}
+.email {
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 4px;
+    color: #fff; 
+}
+.tel {
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 4px;
+    color: #fff; 
+}
+.link-datos {
+    text-decoration: none;
 }
 
 /* experiencia laboral */
