@@ -12,6 +12,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

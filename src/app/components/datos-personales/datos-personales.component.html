@@ -1,38 +1,32 @@
-<div class="container fondo-datos mt-1">
-    <div class="row p-2 p-md-5 mb-4 text-white rounded justify-content-center">
-        <div class="col-md-10 px-0">
-            <a href="#"><i class="fas fa-edit text-dark fs-6"></i></a>
-            <a href="#"><i class="far fa-window-close text-dark ms-2 fs-6"></i></a>
-            <p class="acerca-de lead my-3 text-success">Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder formar parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido.</p>
-            <a [routerLink]="['/Experiencia']" class="link-datos">Ir a experiencias profesionales...</a>
+<div class="container fondo-datos my-2">
+    <div class="tarjeta-datos px-4 py-4 my-4">
+        <a href="#"><i class="fas fa-edit text-dark fs-6"></i></a>
+        <a href="#"><i class="far fa-window-close text-dark ms-2 fs-6"></i></a>
+        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="assets/foto_carnet.jpg">
+        <div class="lista-datos col-md-10 mt-5 text-end">
+            <a href="#"><i class="fas fa-edit text-success ms-4 fs-6"></i></a>
+            <a href="#"><i class="far fa-window-close text-success ms-2 fs-6"></i></a>
+            <h4 class="nombre fw-bold mt-2">BARNETCHE JUAN PABLO</h4>
+            <h5 class="titulo mt-3"><strong>FULL STACK DEVELOPER Jr</strong></h5>
+            <h6 class="email mt-3">jpbarnetche27@gmail.com</h6>
+            <h6 class="tel ms-1 mt-3"><i class="fas fa-mobile-alt text-info mx-2"></i>11-5944-2917</h6>
+            <p class="lugar"> Buenos Aires, ARGENTINA</p>
+        </div>
+        <hr>
+        <div class="col-lg-11 ms-5">
+            <div class="mb-3 text-end">
+                <a href="#"><i class="fas fa-edit text-light fs-6"></i></a>
+                <a href="#"><i class="far fa-window-close text-light ms-2 fs-6"></i></a>
+            </div>
+            <p class="acerca-de text-success text-center mb-4 fs-4">Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder formar parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
+                <button type="button" [routerLink]="['/Experiencia']" class="btn btn-dark text-light btn-sm border border-1 px-4 gap-3">Ir a experiencias</button>
+                <button type="button" [routerLink]="['/Educacion']" class="btn btn-outline-warning btn-sm ms-3 px-4">Ir a educación</button>
+            </div>
+        </div>
+        <div class="text-start mt-4 ms-4">
+            <a [routerLink]="['/inicio']" ><i class="datos-icon fa-solid fa-house text-dark ms-2 fs-4"></i></a>    
         </div>
     </div>
-    <hr>
-    <div class="row my-2">
-        <div class="col-md-5">
-            <img src="assets/foto_carnet.jpg" class="foto-carnet img-thumbnail" alt="...">
-                   <a href="#"><i class="fas fa-edit text-primary ms-2 fs-6"></i></a>
-        </div>
-        <div class="col-md-5 d-flex">
-            <ul class="lista-datos">
-                <li class="ms-4">
-                   <a href="#"><i class="fas fa-edit text-warning fs-6"></i></a>
-                   <a href="#"><i class="far fa-window-close text-warning ms-2 fs-6"></i></a>
-               </li>
-               <li class="nombre ms-5 mt-4 vw-100 fw-bolder text-uppercase text-info fs-md-6 fs-lg-3">Barnetche Juan Pablo</li>
-               <li class="titulo text-uppercase ms-3 mt-1 vw-100"><strong>Full Stack Developer Jr</strong></li>
-               <li class="email mt-1">jpbarnetche27@gmail.com</li>
-               <li class="tel ms-3 mt-2 vw-100"><i class="fas fa-mobile-alt text-info mx-2"></i>11-5944-2917</li>
-               <li><a [routerLink]="['/Educacion']" class="link-datos ms-4">Ir a educación...</a></li>
-           </ul>
-       </div>
-    </div>
-</div>
-<div class="row d-flex">
-  
-          
+</div>         
 
-                
-    
-   
-    
