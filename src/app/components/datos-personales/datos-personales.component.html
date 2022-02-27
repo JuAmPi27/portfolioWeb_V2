@@ -1,32 +1,36 @@
 <div class="container fondo-datos my-2">
     <div class="tarjeta-datos px-4 py-4 my-4">
-        <a href="#"><i class="fas fa-edit text-dark fs-6"></i></a>
-        <a href="#"><i class="far fa-window-close text-dark ms-2 fs-6"></i></a>
+        <div class="mt-1">
+            <a href="#"><i class="fas fa-edit text-dark fs-6"></i></a>
+            <a href="#"><i class="far fa-window-close text-dark ms-2 fs-6"></i></a>
+        </div>
         <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="assets/foto_carnet.jpg">
-        <div class="lista-datos col-md-10 mt-5 text-end">
+        <div class="lista-datos col-md-10 mt-4 text-end">
             <a href="#"><i class="fas fa-edit text-success ms-4 fs-6"></i></a>
             <a href="#"><i class="far fa-window-close text-success ms-2 fs-6"></i></a>
-            <h4 class="nombre fw-bold mt-2">BARNETCHE JUAN PABLO</h4>
+            <h4 class="nombre fw-bold">BARNETCHE JUAN PABLO</h4>
             <h5 class="titulo mt-3"><strong>FULL STACK DEVELOPER Jr</strong></h5>
-            <h6 class="email mt-3">jpbarnetche27@gmail.com</h6>
-            <h6 class="tel ms-1 mt-3"><i class="fas fa-mobile-alt text-info mx-2"></i>11-5944-2917</h6>
-            <p class="lugar"> Buenos Aires, ARGENTINA</p>
+            <h6 class="email mt-3 fs-5">jpbarnetche27@gmail.com</h6>
+            <h6 class="tel mt-3 me-5 fs-6"><i class="fas fa-mobile-alt text-success me-1"></i>11-5944-2917</h6>
+            <p class="lugar mt-3"> Buenos Aires, ARGENTINA</p>
         </div>
+        <br>
         <hr>
         <div class="col-lg-11 ms-5">
             <div class="mb-3 text-end">
                 <a href="#"><i class="fas fa-edit text-light fs-6"></i></a>
                 <a href="#"><i class="far fa-window-close text-light ms-2 fs-6"></i></a>
             </div>
-            <p class="acerca-de text-success text-center mb-4 fs-4">Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder formar parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido.</p>
+            <p class="acerca-de text-success text-center mb-4 fs-5">Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder formar parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
                 <button type="button" [routerLink]="['/Experiencia']" class="btn btn-dark text-light btn-sm border border-1 px-4 gap-3">Ir a experiencias</button>
                 <button type="button" [routerLink]="['/Educacion']" class="btn btn-outline-warning btn-sm ms-3 px-4">Ir a educación</button>
             </div>
         </div>
-        <div class="text-start mt-4 ms-4">
+        <div class="text-center mt-4 ms-4">
             <a [routerLink]="['/inicio']" ><i class="datos-icon fa-solid fa-house text-dark ms-2 fs-4"></i></a>    
         </div>
     </div>
 </div>         
+          
 

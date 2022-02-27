@@ -1,7 +1,7 @@
-<section class="container row experiencia rounded pb-5 mt-2 d-flex justify-content-center">
+<section class="row experiencia rounded m-5 ms-5 pb-5 mt-2 d-flex text-center">
     <h5 class="h5-titulos fs-4 text-light mt-2 text-center">Experiencia Profesional:</h5>
     
-    <div class="accordion d-flex flex-column my-2" id="accordionFlushExample">
+    <div class="accordion d-flex flex-column my-4" id="accordionFlushExample">
         <div class="accordion-item mt-1">
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="empresa accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -109,5 +109,7 @@
             </div>
         </div>
     </div>
-    <button class="btn btn-warning btn-sm text-dark text-end">Volver a inicio</button>
+    <div class="text-center mt-3">
+        <a [routerLink]="['/inicio']" ><i class="datos-icon fa-solid fa-house text-success ms-2 fs-4"></i></a>    
+    </div>
 </section>
