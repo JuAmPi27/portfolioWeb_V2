@@ -33,13 +33,21 @@ body {
     letter-spacing: 2px;
     display: flex; 
     text-decoration: underline;
-    text-shadow: 3px 5px 15px #222;
+    text-shadow: 3px 5px 10px #222;
 }
 .nav-icon:hover {
     text-shadow: 2px 4px 15px #fff;
 }
 .btn-login {
     letter-spacing: 2px;
+}
+
+/* ============ LOGIN =============  */
+.form-signin {
+    font-family: 'Oswald', sans-serif;
+    width: 25%;
+    height: auto;
+    box-shadow: 2px 3px  70px 0 #FFE400;
 }
 
 /* ================== INICIO ==================== */
@@ -156,6 +164,7 @@ body {
 
 /* ============ PROYECTOS =============  */
 .proyectos {
+    font-family: 'Oswald', sans-serif;
     background-image: url("assets/fondo2.jpg");
     background-size: cover;
     border: 1px solid #fff;
@@ -164,6 +173,10 @@ body {
 .h4-titulo-proyectos {
     text-shadow: 2px 4px 15px #fff;
 }
+.div-proyecto {
+    box-shadow: 1px 3px  10px 0 #FFE400;
+}
 .icon-link {
     text-decoration: none;
 }
+

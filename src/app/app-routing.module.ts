@@ -4,17 +4,19 @@ import { DatosPersonalesComponent } from './components/datos-personales/datos-pe
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { LoginComponent } from './components/login/login.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { SkillsComponent } from './components/skills/skills.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full'},
   { path: 'inicio', component: InicioComponent },
-  { path: 'Datos', component: DatosPersonalesComponent },
-  { path: 'Experiencia', component: ExperienciaComponent },
-  { path: 'Educacion', component: EducacionComponent },
-  { path: 'Habilidades', component: SkillsComponent },
-  { path: 'Proyectos', component: ProyectosComponent },
+  { path: 'datos', component: DatosPersonalesComponent },
+  { path: 'experiencia', component: ExperienciaComponent },
+  { path: 'educacion', component: EducacionComponent },
+  { path: 'habilidades', component: SkillsComponent },
+  { path: 'proyectos', component: ProyectosComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

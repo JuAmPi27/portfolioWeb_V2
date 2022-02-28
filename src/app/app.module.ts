@@ -10,6 +10,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -23,6 +24,7 @@ import { DatosPersonalesComponent } from './components/datos-personales/datos-pe
     ProyectosComponent,
     InicioComponent,
     DatosPersonalesComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

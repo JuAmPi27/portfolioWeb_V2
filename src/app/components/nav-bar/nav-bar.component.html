@@ -19,27 +19,27 @@
                 </a>
             </li>
              <li>
-                <a [routerLink]="['/Datos']" class="nav-link px-2 my-1 ms-5 text-dark">
+                <a [routerLink]="['/datos']" class="nav-link px-2 my-1 ms-5 text-dark">
                     <i class="nav-icon fa-solid fa-id-card text-dark ms-1 me-1"></i>Datos personales
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/Experiencia']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/experiencia']" class="nav-link px-2 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-briefcase text-dark me-1"></i>Experiencia
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/Educacion']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/educacion']" class="nav-link px-2 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-graduation-cap text-dark me-1"></i>Educación
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/Habilidades']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/habilidades']" class="nav-link px-2 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-brain text-dark me-1"></i>Habilidades
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/Proyectos']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/proyectos']" class="nav-link px-2 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-list-check text-dark me-1"></i>Proyectos
                 </a>
             </li>
@@ -48,7 +48,7 @@
             <a href="#"><i class="fab fa-instagram-square text-dark fs-4 ms-2"></i></a>
             <a href="#"><i class="fab fa-linkedin text-dark fs-4 ms-3"></i></a>
             <a href="https://github.com/JuAmPi27?tab=repositories" target="_blank"><i class="fa-brands fa-github-square text-dark fs-4 ms-3"></i></a>
-            <button type="button" class="btn btn-outline-dark ms-5 mt-2"><b class="btn-login">Login</b></button>
+            <button type="button" [routerLink]="['/login']" class="btn btn-outline-dark ms-5 mt-2"><b class="btn-login">Login</b></button>
         </div>
     </nav>
 </div>
