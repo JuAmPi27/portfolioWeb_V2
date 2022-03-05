@@ -1,0 +1,125 @@
+{
+    "nombre": "Barnetche Juan Pablo",
+    
+    "certificado": "Full Stack developer JR",
+    
+    "ubicacion": "Buenos Aires, Argentina",
+    
+    "email": "jpbarnetche27@gmail.com",
+    
+    "tel": "11-5944-2917",
+    
+    "acerca": "Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder ser parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido",
+
+    "educacion": [
+        {
+            "titulo": "Título Bachiller Contable",
+            "escuela": "Instituto monseñor Nicolás Esandi",
+            "comienzo": "1995",
+            "fin": "2000"
+        },
+        {
+            "titulo": "Técnico en Seguridad e Higiene en el Trabajo",
+            "escuela": "Universidad Nacional de Quilmes",
+            "comienzo": "marzo 2021",
+            "fin": "en curso"
+        }
+    ],
+
+    "experiencia":[
+        {
+            "empresa": "Droguería del Sud",
+            "cargo": "Repo-preparador (Convey manual y atomática).",
+            "pais": "Buenos Aires, Argentina.",
+            "comienzo": "octubre 2017",
+            "fin": "mayo 2018",
+            "tareas": "Me desempeñaba realizando tareas de repositor y preparador de pedidos."
+        },
+        {
+            "empresa": "Ocasa soluciones logísticas",
+            "cargo": "Operario en la parte de depósito.",
+            "pais": "Buenos Aires, Argentina",
+            "comienzo": "febrero 2011",
+            "fin": "diciembre 2012",
+            "tareas": "Aquí fui camarero y encargado de todo lo referido a la gestión de compras de insumos para el local."
+        },
+        {
+            "empresa": "NadeNá resto-bar",
+            "cargo": "Encargado de sala y camareros (Gestión de compras y eventos).",
+            "pais": "Girona, España",
+            "comienzo": "omarzo 2014",
+            "fin": "noviembre 2016",
+            "tareas": "Mis tareas en la empresa eran preparar, cargar al sistema sap, etiquetar y embalar los pedidos dependiendo del sector (gobierno, laboratorios, Banco Macro o suministros del Banco Macro)"
+        }, 
+        {
+            "empresa": "Citylift S.L - Corbalán S.A",
+            "cargo": "Montaje e instalación de ascensores y montacargas.",
+            "pais": "Girona, España",
+            "comienzo": "abril 2008",
+            "fin": "diciembre 2010",
+            "tareas": "Me desempeñé como ayudante de montador, tanto en la parte mecánica como la parte eléctrica del montaje y realizaba el mantenimiento de los mismos cuando se requería."
+        },
+        {
+            "empresa": "Hotel Marriot Plaza Bs As",
+            "cargo": "Ocupación principal: Camarero de eventos. Otras funciones: Camarero Room Service y maletero.",
+            "pais": "Buenos Aires, Argentina",
+            "comienzo": "septiembre 2005",
+            "fin": "enero 2007",
+            "tareas": "En este Hotel céntrico y emblema de la ciudad de Bs As trabajé como camarero de eventos, camarero room service y maletero. Este último solo cubriendo período vacacional."
+        }
+    ],
+
+    "softSkills": [
+        {
+            "nombre": "Trabajo en equipo",
+            "progreso": "90"
+        },
+        {
+            "nombre": "Organización",
+            "progreso": "100"
+        },
+        {
+            "nombre": "Buena comunicación",
+            "progreso": "90"
+        },
+        {
+            "nombre": "Atención al detalle",
+            "progreso": "100"
+        },
+        {
+            "nombre": "Deseos de aprender",
+            "progreso": "100"
+        },
+        {
+            "nombre": "Creatividad",
+            "progreso": "80"
+        }
+    ],
+    "hardSkills": [
+        {
+            "nombre": "Trabajo en equipo",
+            "progreso": "90"
+        },
+        {
+            "nombre": "Organización",
+            "progreso": "100"
+        },
+        {
+            "nombre": "Buena comunicación",
+            "progreso": "90"
+        },
+        {
+            "nombre": "Atención al detalle",
+            "progreso": "100"
+        },
+        {
+            "nombre": "Deseos de aprender",
+            "progreso": "100"
+        },
+        {
+            "nombre": "Creatividad",
+            "progreso": "80"
+        }
+    ]
+
+}

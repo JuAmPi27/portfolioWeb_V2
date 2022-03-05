@@ -11,6 +11,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
 import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -28,8 +30,10 @@ import { LoginComponent } from './components/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -91,9 +91,9 @@ body {
 }
 .foto-carnet {
     width: 20%;
-    height: 60%;
+    height: 50%;
     border: 1px solid #000;
-    box-shadow: 2px 6px 20px 0 #444;
+    box-shadow: 7px 10px 40px 0 rgb(4, 38, 153);
 }
 .acerca-de {
     font-family: 'Barriecito', cursive;
@@ -101,9 +101,13 @@ body {
     text-shadow: 2px 2px 15px rgba(31, 218, 6, 0.788);
 }
 .lista-datos {
+    /* background-color: #000; */
     font-family: 'Russo One', sans-serif;
     color: #fff;
-    /* text-shadow: 1px 3px 10px #888; */
+    margin-left: 70px;
+    /* border-top: 1px solid #000; */
+    border-right: 1px solid #000;
+    box-shadow: 2px 5px 15px #FFE400;
 }
 .nombre {
     letter-spacing: 5px;
@@ -130,6 +134,7 @@ body {
     text-shadow: 1px 1px 2px #fff;
 }
 
+
 /* =============== EXPERIENCIA ================ */
 .experiencia {
     background-image: url("assets/fondo4.png");
@@ -141,8 +146,13 @@ body {
     .empresa h6{
     font-family: 'Indie Flower', cursive;
     }
+    .accordion-body {
+    font-family: 'Oswald', sans-serif;
+    }
+
 
 /* ============ EDUCACIÓN =============  */
+
 
 
 /* ============ HABILIDADES =============  */

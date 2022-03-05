@@ -2,114 +2,29 @@
     <h5 class="h5-titulos fs-4 text-light mt-2 text-center">Experiencia Profesional:</h5>
     
     <div class="accordion d-flex flex-column my-4" id="accordionFlushExample">
-        <div class="accordion-item mt-1">
-            <h2 class="accordion-header" id="flush-headingOne">
+        <div class="accordion-item mt-3" *ngFor="let experiencia of experienciaList">
+            <h5 class="accordion-header" id="flush-headingOne">
                 <button class="empresa accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    <h6 class="text-dark text-uppercase">Droguería del Sud</h6>
-                   
+                    <h6 class="text-dark text-uppercase">{{ experiencia.empresa }}</h6>
                     <div class="btn-edit btn-cruz text-end">
                         <a href="#"><i class="fas fa-edit text-dark ms-3 fs-6"></i></a>
                         <a href="#"><i class="far fa-window-close text-dark p-1 fs-6"></i></a>
                     </div>
                 </button>
-            </h2>
+            </h5>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-                <strong>Repopreparador (Convey manual y atomática).<em> (Argentina, Buenos Aires)</em> </strong>
-                <br> Desde octubre 2017 a mayo 2018 cubriendo período vacacional de la empresa.
+                <strong>{{ experiencia.cargo }}<em> {{ experiencia.pais }}</em> </strong>
+                <br> Desde {{ experiencia.comienzo }} a {{ experiencia.fin }} cubriendo período vacacional de la empresa.
                 <hr>
-                <p class="tareas">Me desempeñaba realizando tareas de repositor y preparador de pedidos.</p>
+                <p class="tareas">{{ experiencia.tareas }}</p>
             </div>
             </div>
         </div>
-        <br>
-        <div class="accordion-item mt-1">
-            <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="empresa accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    <h6 class="text-dark text-uppercase">Ocasa soluciones logísticas
-                    </h6>
-                    <div class="btn-edit btn-cruz">
-                        <a href="#"><i class="fas fa-edit text-dark ms-3 fs-6"></i></a>
-                        <a href="#"><i class="far fa-window-close text-dark p-1 fs-6"></i></a>
-                    </div>
-                </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-            <strong>Operario en la parte de depósito.<em> (Argentina, Buenos Aires)</em></strong> 
-            <br> Desde marzo del 2014 a Noviembre de 2016.
-            <hr>        
-            <p class="tareas">Mis tareas en la empresa eran preparar, cargar al sistema sap, etiquetar y embalar los pedidos dependiendo del sector (gobierno, laboratorios, Banco Macro o suministros del Banco Macro)</p> 
-            </div>
-            </div>
-        </div>
-          <br>  
-        <div class="accordion-item mt-1">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="empresa accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                <h6 class="text-dark text-uppercase">NADENÁ - Resto bar
-                </h6>
-                <div class="btn-edit btn-cruz">
-                    <a href="#"><i class="fas fa-edit text-dark ms-3 fs-6"></i></a>
-                    <a href="#"><i class="far fa-window-close text-dark p-1 fs-6"></i></a>
-                </div>
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-                <strong>Encargado de sala y camareros (Gestión de compras y eventos).<em> (España, Girona)</em></strong> 
-                <br> Desde febrero del 2011 hasta Diciembre 2012.
-            <hr>        
-            <p class="tareas">Aquí era camarero y encargado de todo lo referido a la gestión de compras de insumos para el local.</p> 
-            </div>
-          </div>
-        </div>
-        <br>
-        <div class="accordion-item mt-1">
-            <h2 class="accordion-header" id="flush-headingFour">
-                <button class="empresa accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    <h6 class="text-dark text-uppercase">CITYLIFT S.L - Corbalán S.A
-                    </h6>
-                    <div class="btn-edit btn-cruz">
-                        <a href="#"><i class="fas fa-edit text-dark ms-3 fs-6"></i></a>
-                        <a href="#"><i class="far fa-window-close text-dark p-1 fs-6"></i></a>
-                    </div>
-                </button>
-            </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    <strong>Montaje e instalación de ascensores y montacargas. Tanto la parte mecánica como la parte eléctrica.<em>(España, Girona)</em>
-                    </strong> 
-            <br> Desde Abril del 2008 a Diciembre de 2010.
-            <hr>        
-                <p class="tareas">Mis tareas en la empresa eran preparar, cargar al sistema sap, etiquetar y embalar los pedidos dependiendo del sector (gobierno, laboratorios, Banco Macro o suministros del Banco Macro).</p> 
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="accordion-item mt-1">
-            <h2 class="accordion-header" id="flush-headingFive">
-                <button class="empresa accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    <h6 class="text-dark text-uppercase">HOTEL MARRIOT PLAZA.
-                    </h6>
-                    <div class="btn-edit btn-cruz">
-                        <a href="#"><i class="fas fa-edit text-dark ms-3 fs-6"></i></a>
-                        <a href="#"><i class="far fa-window-close text-dark p-1 fs-6"></i></a>
-                    </div>
-                </button>
-            </h2>
-            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    <strong>Ocupación principal: Camarero de eventos. Otras funciones: Camarero Room Service y maletero.<em>(Argentina, Buenos Aires)</em>
-                    </strong> 
-            <br> Desde Septiembre del 2005 a Enero del 2007.
-            <hr>        
-                <p class="tareas">En este Hotel céntrico y emblema de la ciudad de Bs As me desempeñé en tareas de camarero de eventos, camarero room service y maletero (cubriendo período vacacional).</p> 
-                </div>
-            </div>
-        </div>
+       
     </div>
     <div class="text-center mt-3">
         <a [routerLink]="['/inicio']" ><i class="datos-icon fa-solid fa-house text-success ms-2 fs-4"></i></a>    
     </div>
 </section>
+                   
