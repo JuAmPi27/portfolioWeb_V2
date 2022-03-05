@@ -1,14 +1,10 @@
 {
     "nombre": "Barnetche Juan Pablo",
-    
+    "img": "assets/foto_carnet.jpg",
     "certificado": "Full Stack developer JR",
-    
     "ubicacion": "Buenos Aires, Argentina",
-    
     "email": "jpbarnetche27@gmail.com",
-    
     "tel": "11-5944-2917",
-    
     "acerca": "Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder ser parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido",
 
     "educacion": [
@@ -68,58 +64,95 @@
             "tareas": "En este Hotel céntrico y emblema de la ciudad de Bs As trabajé como camarero de eventos, camarero room service y maletero. Este último solo cubriendo período vacacional."
         }
     ],
-
-    "softSkills": [
+    "skill": [
         {
+            "icono":"",
+            "tipo": "soft",
             "nombre": "Trabajo en equipo",
             "progreso": "90"
         },
         {
+            "tipo": "soft",
             "nombre": "Organización",
             "progreso": "100"
         },
         {
+            "tipo": "soft",
             "nombre": "Buena comunicación",
             "progreso": "90"
-        },
+         },
         {
+            "tipo": "soft",
             "nombre": "Atención al detalle",
             "progreso": "100"
         },
         {
+            "tipo": "soft",
             "nombre": "Deseos de aprender",
             "progreso": "100"
         },
         {
+            "tipo": "soft",
             "nombre": "Creatividad",
             "progreso": "80"
+        },
+        
+        {
+            "tipo": "hard",
+            "nombre": "HTML",
+            "progreso": "70"
+        },
+        {
+            "tipo": "hard",
+            "nombre": "CSS",
+            "progreso": "50"
+        },
+        {
+            "tipo": "hard",
+            "nombre": "JavaScript",
+            "progreso": "35"
+        },
+        {
+            "tipo": "hard",
+            "nombre": "Git y GitHub",
+            "progreso": "80"
+        },
+        {
+            "tipo": "hard",
+            "nombre": "Bootstrap",
+            "progreso": "50"
+        },
+        {
+            "tipo": "hard",
+            "nombre": "Angular",
+            "progreso": "50"
+        },
+        {
+        
+            "tipo": "hard",
+            "nombre": "MySql",
+            "progreso": "75"
         }
     ],
-    "hardSkills": [
+    "proyecto": [
         {
-            "nombre": "Trabajo en equipo",
-            "progreso": "90"
+            "href": "https://github.com/JuAmPi27/portfolioWeb_V2",
+            "nombre": "portfolioWeb_V2",
+            "descripcion": "Mi portfolio web. Proyecto integrador de la 2° etapa del Argentina programa #yoProgramo.",
+            "fecha": "noviembre 2021 a mayo 2022"
         },
         {
-            "nombre": "Organización",
-            "progreso": "100"
+            "href": "https://github.com/JuAmPi27/miniAppStore",
+            "nombre": "miniAppStore",
+            "descripcion": "Es una demo de una tienda online donde el cliente pagará a contrareembolso.",
+            "fecha": "enero 2022"
         },
         {
-            "nombre": "Buena comunicación",
-            "progreso": "90"
-        },
-        {
-            "nombre": "Atención al detalle",
-            "progreso": "100"
-        },
-        {
-            "nombre": "Deseos de aprender",
-            "progreso": "100"
-        },
-        {
-            "nombre": "Creatividad",
-            "progreso": "80"
+            "href": "https://github.com/JuAmPi27/BreakingAPP",
+            "nombre": "BreakingAPP",
+            "descripcion": "Una app que te muestra los perosnajes de la serie, que a la vez son traídos desde una api.",
+            "fecha": "febrero 2022"
         }
     ]
-
 }
+

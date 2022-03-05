@@ -4,8 +4,9 @@
             <a href="#"><i class="fas fa-edit text-dark fs-6"></i></a>
             <a href="#"><i class="far fa-window-close text-dark ms-2 fs-6"></i></a>
         </div>
-        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="assets/foto_carnet.jpg">
-        <div class="lista-datos col-md-11 pe-5 px-3 mt-4 text-end">
+        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" [src]="miPortfolio.img">
+        <div class="lista-datos col-md-11 pe-4 px-2 mt-5 text-end">
+            <br>
             <a href="#"><i class="fas fa-edit text-success ms-4 fs-6"></i></a>
             <a href="#"><i class="far fa-window-close text-success ms-2 fs-6"></i></a>
             <h4 class="nombre mt-2 fs-2">
@@ -24,6 +25,7 @@
             <p class="lugar mt-3 fs-5">
                 <i class="fa-solid fa-location-dot text-warning fs-4"></i> {{ miPortfolio.ubicacion }}
             </p>
+            <br>
         </div>
         <br>
         <hr>
