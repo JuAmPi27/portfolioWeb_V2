@@ -15,7 +15,7 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe( data => {
         this.hardSkillList = data.hardSkill;
-        console.log(data);
+        this.softSkillList = data.softSkill;
       });
   }
 
