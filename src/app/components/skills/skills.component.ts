@@ -7,13 +7,15 @@ import { DatosPortfolioService } from 'src/app/services/datos-portfolio.service'
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-   skillsList: any;
+   softSkillList: any;
+   hardSkillList: any;
   
   constructor(private datosPortfolio: DatosPortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe( data => {
-        this.skillsList = data.skills;
+        this.hardSkillList = data.hardSkill;
+        console.log(data);
       });
   }
 

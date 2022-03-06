@@ -64,76 +64,70 @@
             "tareas": "En este Hotel céntrico y emblema de la ciudad de Bs As trabajé como camarero de eventos, camarero room service y maletero. Este último solo cubriendo período vacacional."
         }
     ],
-    "skill": [
+    
+    "softSkill": [
         {
-            "icono":"",
-            "tipo": "soft",
             "nombre": "Trabajo en equipo",
             "progreso": "90"
         },
         {
-            "tipo": "soft",
+
             "nombre": "Organización",
             "progreso": "100"
         },
         {
-            "tipo": "soft",
+
             "nombre": "Buena comunicación",
             "progreso": "90"
-         },
+        },
         {
-            "tipo": "soft",
+
             "nombre": "Atención al detalle",
             "progreso": "100"
         },
         {
-            "tipo": "soft",
+
             "nombre": "Deseos de aprender",
             "progreso": "100"
         },
         {
-            "tipo": "soft",
+
             "nombre": "Creatividad",
             "progreso": "80"
-        },
-        
+        }
+    ],
+           
+    "hardSkill": [
         {
-            "tipo": "hard",
             "nombre": "HTML",
             "progreso": "70"
         },
         {
-            "tipo": "hard",
             "nombre": "CSS",
             "progreso": "50"
         },
         {
-            "tipo": "hard",
             "nombre": "JavaScript",
             "progreso": "35"
         },
         {
-            "tipo": "hard",
             "nombre": "Git y GitHub",
             "progreso": "80"
         },
         {
-            "tipo": "hard",
             "nombre": "Bootstrap",
             "progreso": "50"
         },
         {
-            "tipo": "hard",
             "nombre": "Angular",
             "progreso": "50"
         },
         {
-        
-            "tipo": "hard",
             "nombre": "MySql",
             "progreso": "75"
         }
     ],
+            
     "proyecto": [
         {
             "href": "https://github.com/JuAmPi27/portfolioWeb_V2",
