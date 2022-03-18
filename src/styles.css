@@ -151,8 +151,20 @@ body {
 
 
 /* ============ EDUCACIÓN =============  */
-
-
+.educacion {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    background-image: url("assets/fondo4.png");
+    background-size: cover; 
+    height: auto;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+.nombre_curso {
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 4px;
+    color:#FFE400;
+}
 
 /* ============ HABILIDADES =============  */
 .skills{

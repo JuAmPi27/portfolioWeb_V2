@@ -12,6 +12,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CursosComponent } from './components/cursos/cursos.component';
 
 
 
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     InicioComponent,
     DatosPersonalesComponent,
     LoginComponent,
+    CursosComponent,
   ],
   imports: [
     BrowserModule,

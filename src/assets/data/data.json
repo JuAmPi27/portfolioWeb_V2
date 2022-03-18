@@ -9,7 +9,7 @@
 
     "educacion": [
         {
-            "titulo": "Título Bachiller Contable",
+            "titulo": "Bachiller Contable",
             "escuela": "Instituto monseñor Nicolás Esandi",
             "comienzo": "1995",
             "fin": "2000"
@@ -19,6 +19,29 @@
             "escuela": "Universidad Nacional de Quilmes",
             "comienzo": "marzo 2021",
             "fin": "en curso"
+        }
+    ],
+
+    "cursos": [
+        {
+            "nombre": "Java para no programadores",
+            "lugar": "Educación IT (Lavalle 648 Piso 8, CABA).",
+            "href": "assets/certificado_java"
+        },
+        {
+            "nombre": "HTML5: Fundamentos de una página web",
+            "lugar": "Educación IT (Lavalle 648 Piso 8, CABA).",
+            "href": "assets/certificado_html5"
+        },
+        {
+            "nombre": "Introducción a bases de datos y SQL",
+            "lugar": "Educación IT (Lavalle 648 Piso 8, CABA).",
+            "href": "assets/data/certificado_BBDD"
+        },
+        {
+            "nombre": "inglés para desarrolladores",
+            "lugar": "INTI",
+            "href": "assets/"
         }
     ],
 
