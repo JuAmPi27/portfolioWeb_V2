@@ -1,21 +1,19 @@
-<div class="container-fluid educacion justify-content-center px-4 py-5 mt-2" id="icon-grid">
-    <h5 class="pb-2 h5-titulos text-light text-center border-bottom">Educación</h5>
+<div class="container-fluid educacion justify-content-center px-2 py-5 mt-2" id="icon-grid">
+    <h5 class="pb-2 h5-titulos text-light text-center">Educación</h5>
+<button class="btn btn-sm btn-warning">Agregar educación</button>
 
+
+    <!-- ====Educacion=== -->
     <div class="row align-items-md-stretch my-3 pb-3 border-bottom">
-        <div class="col-md-6">
-          <div class="h-100 p-5 text-dark bg-warning rounded-3">
-            <h5>Instituto Monseñor Nicolás Esandi</h5>
-            <p>Bachiller contable.</p>
-            <button class="btn btn-outline-light" type="button">Example button</button>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="h-100 p-5 bg-light border rounded-3">
-            <h5>Universidad Nacional de Quilmes</h5>
-            <p>Técnico en Seguridad e Higiene en el trabajo.</p>
-            <button class="btn btn-outline-secondary" type="button">Example button</button>
+        <div class="col-md-4" *ngFor="let educacion of educacionList">
+          <div class="h-100 p-4 text-center text-dark bg-warning rounded-2">
+            <h5><i class="fa-solid fa-graduation-cap text-dark"></i> {{ educacion.escuela }}</h5>
+            <h6>{{ educacion.titulo }}</h6>
+            <p>{{ educacion.comienzo }} - {{ educacion.fin }}</p>
           </div>
         </div>
       </div>
+     
+      <!-- ====Cursos realizado==== -->
    <app-cursos></app-cursos>
 </div>

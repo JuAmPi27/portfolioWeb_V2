@@ -15,11 +15,18 @@
             "fin": "2000"
         },
         {
+            "titulo": " 5° año de Inglés (inclusive)",
+            "escuela": "Enjoy School Of English",
+            "comienzo": "1997",
+            "fin": "2001"
+        },
+        {
             "titulo": "Técnico en Seguridad e Higiene en el Trabajo",
             "escuela": "Universidad Nacional de Quilmes",
             "comienzo": "marzo 2021",
             "fin": "en curso"
         }
+       
     ],
 
     "cursos": [
@@ -36,11 +43,11 @@
         {
             "nombre": "Introducción a bases de datos y SQL",
             "lugar": "Educación IT (Lavalle 648 Piso 8, CABA).",
-            "href": "assets/data/certificado_bbdd"
+            "src": "assets/certificado_bbdd"
         },
         {
             "nombre": "inglés para desarrolladores",
-            "lugar": "INTI",
+            "lugar": "Ministerio de desarrollo productivo y el I.N.T.I",
             "href": "assets/"
         }
     ],
