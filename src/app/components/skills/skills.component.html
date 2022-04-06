@@ -8,7 +8,7 @@
                 <div *ngFor="let hardSkill of hardSkillList">
                     <h6><i class="fa-brands fa-html5 text-info mt-2"></i> {{ hardSkill.nombre }}</h6>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">
                         </div>
                     </div>
                 </div>

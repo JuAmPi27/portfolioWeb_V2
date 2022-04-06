@@ -13,6 +13,7 @@ import { DatosPersonalesComponent } from './components/datos-personales/datos-pe
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CursosComponent } from './components/cursos/cursos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -33,7 +34,8 @@ import { CursosComponent } from './components/cursos/cursos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
  
   providers: [],
