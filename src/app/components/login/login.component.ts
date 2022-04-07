@@ -13,14 +13,15 @@ export class LoginComponent implements OnInit {
   
   miPortfolio: any;
   loginForm!: FormGroup;
-  form!: FormGroup;
+  formLogin!: FormGroup;
   
   constructor(
+    private datosPortfolio: DatosPortfolioService,
     private authService: AuthService,
     private router: Router, 
     private formBuilder: FormBuilder
     ) {
-      this.form = this.formBuilder.group(
+      this.formLogin = this.formBuilder.group(
         {
           email: ['', [Validators.required, Validators.email]],
           contraseña: ['', [Validators.required, Validators.minLength(6)]]
@@ -29,22 +30,25 @@ export class LoginComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    
+    this.datosPortfolio.obtenerDatos().subscribe( data => {
+      this.miPortfolio = data;
+    });
   }
+  
 
   onSubmit(event: Event) : void {
     event.preventDefault;
 
-    if(this.authService.login(this.form.value))
+    if(this.authService.login(this.formLogin.value))
       this.router.navigate(['inicio']);
   }
 
   get Email() {
-    return this.form.get('email');
+    return this.formLogin.get('email');
   }
 
   get Contraseña() {
-    return this.form.get('contraseña');
+    return this.formLogin.get('contraseña');
   }
 
 }

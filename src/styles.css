@@ -35,6 +35,9 @@ body {
     text-decoration: underline;
     text-shadow: 3px 5px 10px #222;
 }
+.nav-link:hover {
+    text-shadow: 2px 4px 15px #fff;
+}
 .nav-icon:hover {
     text-shadow: 2px 4px 15px #fff;
 }

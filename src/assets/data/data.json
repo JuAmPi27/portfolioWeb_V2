@@ -1,5 +1,6 @@
 {
-    "nombre": "Barnetche Juan Pablo",
+    "nombre": "Juan Pablo",
+    "apellido": "Barnetche",
     "img": "assets/foto_carnet.jpg",
     "certificado": "Full Stack developer JR",
     "ubicacion": "Buenos Aires, Argentina",
