@@ -1,10 +1,9 @@
 <div class="container-fluid educacion justify-content-center px-2 py-5 mt-2" id="icon-grid">
-    <h5 class="pb-2 h5-titulos text-light text-center">Educación</h5>
+    <h5 class="pb-2 h5-titulos text-light text-center fs-3">Educación</h5>
 <button class="btn btn-sm btn-warning">Agregar educación</button>
 
-
-    <!-- ====Educacion=== -->
-    <div class="row align-items-md-stretch my-3 pb-3 border-bottom">
+   <!-- ====Educacion=== -->
+    <div class="row align-items-md-stretch my-3 pb-3 border-bottom justify-content-center">
         <div class="col-md-4" *ngFor="let educacion of educacionList">
           <div class="h-100 p-4 text-center text-dark bg-warning rounded-2">
             <h5><i class="fa-solid fa-graduation-cap text-dark"></i> {{ educacion.escuela }}</h5>
@@ -12,7 +11,7 @@
             <p>{{ educacion.comienzo }} - {{ educacion.fin }}</p>
           </div>
         </div>
-      </div>
+    </div>
      
       <!-- ====Cursos realizado==== -->
    <app-cursos></app-cursos>

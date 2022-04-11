@@ -15,9 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
