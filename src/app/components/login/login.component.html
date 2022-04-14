@@ -1,22 +1,26 @@
 <section class="container form-signin text-center p-5 my-4">
     <form [formGroup]="formLogin" (ngSubmit)="onSubmit($event)">
       <img class="my-2 rounded-circle" [src]="miPortfolio.img" alt="" width="90" height="90">
-      <h5 class="h5-titulos mt-2 mb-3 fw-normal text-light">Login</h5>
-  
-      <div class="form-floating">
-        <input type="email" class="form-control" formControlName="email" id="floatingInput" placeholder="nombre@ejemplo.com">
+      
+      <div class="form-floating mt-3">
+        <input type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
         <label for="floatingInput">Correo</label>
         <div *ngIf="Email?.errors && Email?.touched">
-          <span *ngIf="Email?.hasError('required')" class="text-danger">¡El email no es válido!</span>
+          <p *ngIf="Email?.hasError('required')" class="text-danger">¡El email es requerido!</p>
+          <p *ngIf="Email?.hasError('email')" class="text-danger">¡El formato de email no es válido!</p>
         </div>
       </div>
       <div class="form-floating mt-3">
-        <input type="password" class="form-control mt-2" formControlName="contraseña" id="floatingPassword" placeholder="Contraseña">
+        <input type="password" class="form-control mt-2" formControlName="contraseña" [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
         <label for="floatingPassword">Contraseña</label>
+        <div *ngIf="Password?.errors && Password?.touched">
+          <p *ngIf="Password?.hasError('required')" class="text-danger">La contraseña es requerida!</p>
+        </div>
       </div>
       <br>
-      <button [disabled]="formLogin.invalid" class="w-100 btn btn-lg btn-warning text-dark" type="submit">Enviar</button>
+      <button [disabled]="formLogin.invalid" class="w-100 btn btn-lg btn-warning text-dark" type="submit">Iniciar sesión</button>
     </form>
 </section>
+
      
     

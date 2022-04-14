@@ -12,8 +12,7 @@ import { DatosPortfolioService } from 'src/app/services/datos-portfolio.service'
 export class LoginComponent implements OnInit {
   
   miPortfolio: any;
-  loginForm!: FormGroup;
-  formLogin!: FormGroup;
+  formLogin: FormGroup;
   
   constructor(
     private datosPortfolio: DatosPortfolioService,
@@ -24,7 +23,7 @@ export class LoginComponent implements OnInit {
       this.formLogin = this.formBuilder.group(
         {
           email: ['', [Validators.required, Validators.email]],
-          contraseña: ['', [Validators.required, Validators.minLength(6)]]
+          contraseña: ['', [Validators.required, Validators.minLength(7)]]
         }
       );
     }
@@ -40,14 +39,14 @@ export class LoginComponent implements OnInit {
     event.preventDefault;
 
     if(this.authService.login(this.formLogin.value))
-      this.router.navigate(['inicio']);
+      this.router.navigate(['portfolio']);
   }
 
   get Email() {
     return this.formLogin.get('email');
   }
 
-  get Contraseña() {
+  get Password() {
     return this.formLogin.get('contraseña');
   }
 

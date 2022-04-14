@@ -154,8 +154,12 @@
             "progreso": "50"
         },
         {
-            "nombre": "MySql",
+            "nombre": "MySQL",
             "progreso": "75"
+        },
+        {
+            "nombre": "Spring",
+            "progreso": "25" 
         }
     ],
             
