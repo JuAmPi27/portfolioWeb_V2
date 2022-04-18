@@ -14,41 +14,42 @@
         </div>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
             <li>
-                <a [routerLink]="['/inicio']" class="nav-link px-2 my-1 ms-5 text-dark">
+                <a [routerLink]="['/inicio']" class="nav-link px-3 my-1 ms-3 text-dark">
                     <i class="nav-icon fa-solid fa-house text-dark ms-2"></i>INICIO
                 </a>
             </li>
              <li>
-                <a [routerLink]="['/datos']" class="nav-link px-2 my-1 ms-5 text-dark">
+                <a [routerLink]="['/datos']" class="nav-link px-3 my-1 ms-5 text-dark">
                     <i class="nav-icon fa-solid fa-id-card text-dark ms-1 me-1"></i>Datos personales
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/experiencia']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/experiencia']" class="nav-link px-3 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-briefcase text-dark me-1"></i>Experiencia
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/educacion']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/educacion']" class="nav-link px-3 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-graduation-cap text-dark me-1"></i>Educación
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/habilidades']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/habilidades']" class="nav-link px-3 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-brain text-dark me-1"></i>Habilidades
                 </a>
             </li>
             <li>
-                <a [routerLink]="['/proyectos']" class="nav-link px-2 my-1 text-dark">
+                <a [routerLink]="['/proyectos']" class="nav-link px-3 my-1 text-dark">
                     <i class="nav-icon fa-solid fa-list-check text-dark me-1"></i>Proyectos
                 </a>
             </li>
         </ul>
         <div class="text-end">
-            <a href="#" target="_blank"><i class="fab fa-instagram-square text-dark fs-4 ms-2"></i></a>
             <a href="#" target="_blank"><i class="fab fa-linkedin text-dark fs-4 ms-3"></i></a>
             <a href="https://github.com/JuAmPi27?tab=repositories" target="_blank"><i class="fa-brands fa-github-square text-dark fs-4 ms-3"></i></a>
-            <button type="button" [routerLink]="['/login']" class="btn btn-outline-dark ms-5 mt-2"><b class="btn-login">Login</b></button>
+            
+            <button *ngIf="!isUserLogged" type="button" [routerLink]="['/login']" class="btn btn-outline-dark ms-5 mt-2"><b class="btn-login">Login</b></button>
+            <button *ngIf="isUserLogged" type="button" [routerLink]="['/logout']" class="btn btn-outline-success ms-5 mt-2" (click)="logout()"><b class="btn-login">Logout</b></button>
         </div>
     </nav>
 </div>

@@ -1,7 +1,10 @@
 <div class="container-fluid educacion justify-content-center px-2 py-5 mt-2" id="icon-grid">
     <h5 class="pb-2 h5-titulos text-light text-center fs-3">Educación</h5>
-<button class="btn btn-sm btn-warning">Agregar educación</button>
+   <div class="data-control"> <!-- terminar de ver el modal para agragar y borrar educacion-->
+    <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="educationForm">Agregar educación</button> <!--cambiar bottones por iconos-->
+    <button class="btn btn-sm btn-warning">Borrar educación</button>
 
+  </div>
    <!-- ====Educacion=== -->
     <div class="row align-items-md-stretch my-3 pb-3 border-bottom justify-content-center">
         <div class="col-md-4" *ngFor="let educacion of educacionList">
