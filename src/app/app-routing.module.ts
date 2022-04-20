@@ -9,7 +9,6 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { SkillsComponent } from './components/skills/skills.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/inicio', pathMatch: 'full'},
   { path: 'inicio', component: InicioComponent },
   { path: 'datos', component: DatosPersonalesComponent },
   { path: 'experiencia', component: ExperienciaComponent },
@@ -17,6 +16,7 @@ const routes: Routes = [
   { path: 'habilidades', component: SkillsComponent },
   { path: 'proyectos', component: ProyectosComponent },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/inicio', pathMatch: 'full'},
 ];
 
 @NgModule({

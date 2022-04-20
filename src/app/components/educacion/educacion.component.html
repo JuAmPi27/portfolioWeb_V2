@@ -1,13 +1,62 @@
-<div class="container-fluid educacion justify-content-center px-2 py-5 mt-2" id="icon-grid">
-    <h5 class="pb-2 h5-titulos text-light text-center fs-3">Educación</h5>
-   <div class="data-control"> <!-- terminar de ver el modal para agragar y borrar educacion-->
-    <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="educationForm">Agregar educación</button> <!--cambiar bottones por iconos-->
-    <button class="btn btn-sm btn-warning">Borrar educación</button>
-
+<div class="container-fluid educacion justify-content-center px-2 py-5 mt-2" id="education">
+ 
+  <!-- ==== Modal ==== -->
+  <div class="modal fade" id="educationForm" tabindex="-1" aria-labelledby="educationFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="educationFormLabel">Nueva educación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="educationForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
+            
+            <div class="mb-3">
+              <label for="titulo" class="col-sm-2 col-form-label">Título:</label>
+              <div class="col-sm-10">
+                <input type="text" name="titulo" formControlName="titulo" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="escuela" class="col-sm-2 col-form-label">Institución:</label>
+              <div class="col-sm-10">
+                <input type="text" name="escuela" formControlName="escuela" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="comienzo" class="col-sm-2 col-form-label">Fecha comienzo:</label>
+              <div class="col-sm-10">
+                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="fin" class="col-sm-2 col-form-label">Fecha fin:</label>
+              <div class="col-sm-10">
+                <input type="text" name="fin" formControlName="fin" class="form-control" required>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning text-dark">Agregar</button>
+          <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
   </div>
+
+    <h5 class="pb-2 h5-titulos text-light text-center fs-3">Educación</h5>
+    <div *ngIf="!isUserLogged" class="data-control"> <!--=== quitar el "!" cuando configure bien el login ====-->
+      <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onNewEducation()">Agregar educación</button> 
+    </div>
    <!-- ====Educacion=== -->
     <div class="row align-items-md-stretch my-3 pb-3 border-bottom justify-content-center">
         <div class="col-md-4" *ngFor="let educacion of educacionList">
+          <div *ngIf="!isUserLogged" class="data-control btn-edit btn-cruz text-end">
+            <button><i class="fas fa-edit text-warning"></i></button>
+            <button><i class="far fa-window-close text-warning"></i></button>
+          </div>
           <div class="h-100 p-4 text-center text-dark bg-warning rounded-2">
             <h5><i class="fa-solid fa-graduation-cap text-dark"></i> {{ educacion.escuela }}</h5>
             <h6>{{ educacion.titulo }}</h6>
@@ -16,6 +65,6 @@
         </div>
     </div>
      
-      <!-- ====Cursos realizado==== -->
+      <!-- ====Cursos realizados==== -->
    <app-cursos></app-cursos>
 </div>
