@@ -10,7 +10,7 @@ import { Educacion } from 'src/assets/data/Educacion';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacionList: any;
+  educacionList: Educacion[] = [];
   isUserLogged: Boolean = false;
 
   educationForm: FormGroup;
@@ -33,8 +33,10 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.isUserLogged = this.authService.isUserLogged();
     
-    this.datosPortfolio.obtenerDatos().subscribe( data => {
-      this.educacionList = data.educacion;
+    this.datosPortfolio.obtenerDatosEducacion().subscribe( 
+      (data) => {
+      this.educacionList = data;
+      console.log(data); //para verificar por consola que nos llega bien la data solicitada
     });
   }
 
@@ -52,7 +54,8 @@ export class EducacionComponent implements OnInit {
   }
 
   onEditEducation(index: number) {
-    console.log(index);
+    let educacion : Educacion = this.educacionList[index];
+    this.loadForm(educacion);
   }
 
   onDeleteEducation(index:number) {
@@ -67,6 +70,16 @@ export class EducacionComponent implements OnInit {
       comienzo: '',
       fin: ''
     });
+  }
+
+  private loadForm(educacion: Educacion) {
+    this.educationForm.setValue({
+      id: educacion.id,
+      titulo: educacion.titulo,
+      escuela: educacion.escuela,
+      comienzo: educacion.comienzo,
+      fin: educacion.fin,
+    })
   }
 
 }

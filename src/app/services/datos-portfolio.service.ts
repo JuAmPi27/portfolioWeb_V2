@@ -12,10 +12,9 @@ export class DatosPortfolioService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerDatos(): Observable<any> {
-   
-    // return this.http.post<any>(config.baseUrl + "educacion");
-    return this.http.get('./assets/data/data.json');
+  obtenerDatosEducacion(): Observable<Educacion[]> {
+   return this.http.get<any>(config.baseUrl + "educacion");
+    // return this.http.get('./assets/data/data.json');
   }
 
   guardarNuevaEducacion (educacion: Educacion): Observable<Educacion> {
