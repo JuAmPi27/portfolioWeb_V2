@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { DatosPortfolioService } from 'src/app/services/datos-portfolio.service';
+import { Educacion } from 'src/assets/data/Educacion';
 
 @Component({
   selector: 'app-educacion',
@@ -38,11 +39,24 @@ export class EducacionComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.educationForm.value);
+    this.datosPortfolio.guardarNuevaEducacion(this.educationForm.value).subscribe(
+      (nuevaEducacion: Educacion) => {
+        console.log(nuevaEducacion);
+        this.educacionList.push(nuevaEducacion);
+      }
+    );
   }
 
   onNewEducation() {
     this.clearForm();
+  }
+
+  onEditEducation(index: number) {
+    console.log(index);
+  }
+
+  onDeleteEducation(index:number) {
+
   }
 
   private clearForm() {
