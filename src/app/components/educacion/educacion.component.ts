@@ -27,12 +27,14 @@ export class EducacionComponent implements OnInit {
        comienzo: ['', [Validators.required]] ,
        fin: ['', [Validators.required]] 
       });
-
     }
 
   ngOnInit(): void {
     this.isUserLogged = this.authService.isUserLogged();
-    
+    this.reloaData();
+  }
+
+  private reloaData() {
     this.datosPortfolio.obtenerDatosEducacion().subscribe( 
       (data) => {
       this.educacionList = data;
@@ -41,13 +43,21 @@ export class EducacionComponent implements OnInit {
   }
 
   onSubmit() {
-    this.datosPortfolio.guardarNuevaEducacion(this.educationForm.value).subscribe(
-      (nuevaEducacion: Educacion) => {
-        console.log(nuevaEducacion);
-        this.educacionList.push(nuevaEducacion);
-      }
-    );
-  }
+    if (this.educationForm.get('id')?.value == '') {
+      this.datosPortfolio.guardarNuevaEducacion(this.educationForm.value).subscribe(
+        (nuevaEducacion: Educacion) => {
+          this.educacionList.push(nuevaEducacion);
+        }
+      );
+    }
+    else {
+      this.datosPortfolio.modificarEducacion(this.educationForm.value).subscribe(
+        () => {
+          this.reloaData();
+        }
+      );
+    }
+  } 
 
   onNewEducation() {
     this.clearForm();
@@ -58,8 +68,15 @@ export class EducacionComponent implements OnInit {
     this.loadForm(educacion);
   }
 
-  onDeleteEducation(index:number) {
-
+  onDeleteEducation(index: number) {
+    if (confirm("¿Esta seguro que desea borrar esta educación?")) {
+      let educacion : Educacion = this.educacionList[index];
+      this.datosPortfolio.borrarEducacion(educacion.id).subscribe(
+        () => {
+          this.reloaData();
+        }
+      );
+    }
   }
 
   private clearForm() {

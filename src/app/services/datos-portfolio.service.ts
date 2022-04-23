@@ -12,13 +12,21 @@ export class DatosPortfolioService {
 
   constructor(private http: HttpClient) { }
 
+  // ===CRUD datos educación===
   obtenerDatosEducacion(): Observable<Educacion[]> {
    return this.http.get<any>(config.baseUrl + "educacion");
-    // return this.http.get('./assets/data/data.json');
   }
 
   guardarNuevaEducacion (educacion: Educacion): Observable<Educacion> {
     return this.http.post<any> (config.baseUrl + "educacion/crear", educacion);
+  }
+
+  modificarEducacion (educacion: Educacion): Observable<any> {
+    return this.http.put<any> (config.baseUrl + "educacion/update", educacion );
+  }
+
+  borrarEducacion(id: number): Observable<any> {
+    return this.http.delete<any> (config.baseUrl + "educacion/" + id);
   }
 
 }

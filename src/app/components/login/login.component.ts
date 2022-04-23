@@ -11,8 +11,8 @@ import { DatosPortfolioService } from 'src/app/services/datos-portfolio.service'
 })
 export class LoginComponent implements OnInit {
   
-  miPortfolio: any;
   formLogin: FormGroup;
+  loginError: Boolean = false;
   
   constructor(
     private datosPortfolio: DatosPortfolioService,
@@ -23,23 +23,28 @@ export class LoginComponent implements OnInit {
       this.formLogin = this.formBuilder.group(
         {
           email: ['', [Validators.required, Validators.email]],
-          contraseña: ['', [Validators.required, Validators.minLength(7)]]
+          password: ['', [Validators.required, Validators.minLength(7)]]
         }
       );
     }
 
-  ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe( data => {
-      this.miPortfolio = data;
-    });
-  }
+  ngOnInit(): void { }
   
-
-  onSubmit(event: Event) : void {
+  
+  onSubmit(event: Event) {
     event.preventDefault;
 
-    if(this.authService.login(this.formLogin.value))
-      this.router.navigate(['portfolio']);
+    this.authService.login(this.formLogin.value).subscribe(
+      (response: Boolean) => {
+        if (response)
+          this.router.navigate(['/inicio']);
+        else
+          this.loginError = true;
+      }
+    );
+    
+    /* if(this.authService.login(this.formLogin.value))
+      this.router.navigate(['portfolio']); */
   }
 
   get Email() {
@@ -47,7 +52,7 @@ export class LoginComponent implements OnInit {
   }
 
   get Password() {
-    return this.formLogin.get('contraseña');
+    return this.formLogin.get('password');
   }
 
 }

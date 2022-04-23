@@ -34,21 +34,25 @@
         {
             "nombre": "Java para no programadores",
             "lugar": "Educación IT (Lavalle 648 Piso 8, CABA).",
+            "duracion": "",
             "href": "assets/certificado_java"
         },
         {
             "nombre": "HTML5: Fundamentos de una página web",
             "lugar": "Educación IT (Lavalle 648 Piso 8, CABA).",
+            "duracion": "",
             "href": "assets/certificado_html5"
         },
         {
             "nombre": "Introducción a bases de datos y SQL",
             "lugar": "Educación IT (Lavalle 648 Piso 8, CABA).",
-            "src": "assets/certificado_bbdd"
+            "duracion": "",
+            "href": "assets/certificado_bbdd"
         },
         {
             "nombre": "inglés para desarrolladores",
             "lugar": "Ministerio de desarrollo productivo y el I.N.T.I",
+            "duracion": "",
             "href": "assets/"
         }
     ],
@@ -168,19 +172,19 @@
             "href": "https://github.com/JuAmPi27/portfolioWeb_V2",
             "nombre": "portfolioWeb_V2",
             "descripcion": "Mi portfolio web. Proyecto integrador de la 2° etapa del Argentina programa #yoProgramo.",
-            "fecha": "noviembre 2021 a mayo 2022"
+            "fechaRealizacion": "noviembre 2021 a mayo 2022"
         },
         {
             "href": "https://github.com/JuAmPi27/miniAppStore",
             "nombre": "miniAppStore",
             "descripcion": "Es una demo de una tienda online donde el cliente pagará a contrareembolso.",
-            "fecha": "enero 2022"
+            "fechaRealizacion": "enero 2022"
         },
         {
             "href": "https://github.com/JuAmPi27/BreakingAPP",
             "nombre": "BreakingAPP",
             "descripcion": "Una app que te muestra los perosnajes de la serie, que a la vez son traídos desde una api.",
-            "fecha": "febrero 2022"
+            "fechaRealizacion": "febrero 2022"
         }
     ]
 }

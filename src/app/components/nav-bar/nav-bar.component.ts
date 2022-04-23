@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-  githubUrl = "https://github.com/JuAmPi27?tab=repositories";
+  gitHubUrl = "https://github.com/JuAmPi27?tab=repositories";
   isUserLogged: Boolean = false;
 
   constructor(private authService: AuthService) { }
