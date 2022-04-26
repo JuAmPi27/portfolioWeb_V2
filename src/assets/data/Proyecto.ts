@@ -1,8 +1,8 @@
-export interface SoftSkill {
+export interface Proyecto {
    
     id: number;
     nombre: String;
     descripcion: String;
     fechaRealizacion: String;
-    href: String
+    github: String
 }

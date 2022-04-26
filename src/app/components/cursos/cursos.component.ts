@@ -12,9 +12,9 @@ export class CursosComponent implements OnInit {
   constructor(private datosPortfolio: DatosPortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe( data => {
+   /* this.datosPortfolio.obtenerDatos().subscribe( data => {
       this.cursosList = data.cursos;
-    });
+    });*/
   }
 
 }

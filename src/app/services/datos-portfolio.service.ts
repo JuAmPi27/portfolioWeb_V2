@@ -5,6 +5,8 @@ import { config } from 'src/assets/data/config/Config';
 import { Educacion } from 'src/assets/data/Educacion';
 
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +14,27 @@ export class DatosPortfolioService {
 
   constructor(private http: HttpClient) { }
 
-  // ===CRUD datos educación===
+  // === CRUD DATOS PROYECTOS ===
+  
+
+
+
+  // === CRUD DATOS HARD-SKILLS ===
+
+
+
+
+  // === CRUD DATOS SOFT-SKILLS ===
+
+
+
+  
+  // === CRUD DATOS EXPERIENCIA ===
+
+
+
+
+  // === CRUD DATOS EDUCACION ===
   obtenerDatosEducacion(): Observable<Educacion[]> {
    return this.http.get<any>(config.baseUrl + "educacion");
   }
@@ -28,6 +50,8 @@ export class DatosPortfolioService {
   borrarEducacion(id: number): Observable<any> {
     return this.http.delete<any> (config.baseUrl + "educacion/" + id);
   }
+
+  // === CRUD DATOS CURSOS REALIZADOS ===
 
 }
 

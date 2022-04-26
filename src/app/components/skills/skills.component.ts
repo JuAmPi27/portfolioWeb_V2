@@ -13,10 +13,10 @@ export class SkillsComponent implements OnInit {
   constructor(private datosPortfolio: DatosPortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe( data => {
+   /*  this.datosPortfolio.obtenerDatos().subscribe( data => {
         this.hardSkillList = data.hardSkill;
         this.softSkillList = data.softSkill;
-      });
+      }); */
   }
 
 }

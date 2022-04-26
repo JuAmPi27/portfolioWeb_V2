@@ -13,8 +13,8 @@ export class InicioComponent implements OnInit {
   constructor(private datosPortfolio: DatosPortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe( data => {
+    /*this.datosPortfolio.obtenerDatos().subscribe( data => {
       this.miPortfolio = data;
-    });
+    }); */
   }
 }
