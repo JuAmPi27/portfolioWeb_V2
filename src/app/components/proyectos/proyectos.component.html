@@ -1,16 +1,68 @@
 <section class="proyectos container my-3">
+
+<!--=== MODAL PROYECTO ===-->
+<div class="modal fade" id="proyectoForm" tabindex="-1" aria-labelledby="proyectoFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="proyectoFormLabel">Nuevo proyecto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="proyectoForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
+            
+            <div class="mb-3">
+              <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+              <div class="col-sm-10">
+                <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="col-sm-2 col-form-label">Descripción:</label>
+              <div class="col-sm-10">
+                <input type="text" name="descripcion" formControlName="descripcion" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="fechaRealizacion" class="col-sm-2 col-form-label">Fecha de realización:</label>
+              <div class="col-sm-10">
+                <input type="text" name="fechaRealizacion" formControlName="fechaRealizacion" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="github" class="col-sm-2 col-form-label">Github URL:</label>
+              <div class="col-sm-10">
+                <input type="text" name="github" formControlName="github" class="form-control" required>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning text-dark">Agregar</button>
+          <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <div class=" py-3 text-light">
         <h5 class="h5-titulos text-center pb-2 border-bottom">
             <a href="#"><i class="fas fa-edit text-warning me-2 fs-6"></i></a>Proyectos
         </h5>
-        <div class="row g-2 py-4 mt-2 row-cols-2 row-cols-lg-2 d-flex justify-content-around" *ngFor="let proyecto of proyectoList">
+
+        <div *ngIf="!isUserLogged" class="data-control"> <!--=== quitar el "!" cuando configure bien el login ====-->
+            <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onNewProyect()">Agregar proyecto</button> 
+          </div>
+
+        <div class="row g-2 py-4 mt-2 row-cols-2 row-cols-lg-2 d-flex justify-content-around" *ngFor="let proyecto of proyectoList; let i = index">
             <div class="div-proyecto col border border-warning p-2 m-2">
                 <div class="bg-warning bg-gradient mb-2">
                     <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
                 </div>
                 <h4 class="h4-titulo-proyectos mt-2 ms-2 fs-3"><i class="fa-solid fa-angles-right text-warning"></i> {{ proyecto.nombre }}</h4>
-                <p class="text-success fs-5">{{ proyecto.descripcion }} <em class="text-light"> ({{ proyecto.fecha }})</em></p>
-                <a [href]="proyecto.href"  target="_blank" class="icon-link text-warning ms-4 mt-2"><i class="fa-solid fa-code text-warning"></i> Ver código en github...</a>
+                <p class="text-success fs-5">{{ proyecto.descripcion }} <em class="text-light"> ({{ proyecto.fechaRealizacion }})</em></p>
+                <a [href]="proyecto.github"  target="_blank" class="icon-link text-warning ms-4 mt-2"><i class="fa-solid fa-code text-warning"></i> Ver código en github...</a>
                 <br>
                 <div class="my-2 me-2 text-end">
                     <a href="#"><i class="fas fa-edit text-warning fs-6"></i></a>

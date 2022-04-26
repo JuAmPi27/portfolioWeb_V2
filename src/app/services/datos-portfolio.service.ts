@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { config } from 'src/assets/data/config/Config';
 import { Educacion } from 'src/assets/data/Educacion';
+import { Proyecto } from 'src/assets/data/Proyecto';
 
 
 
@@ -15,8 +16,21 @@ export class DatosPortfolioService {
   constructor(private http: HttpClient) { }
 
   // === CRUD DATOS PROYECTOS ===
-  
-
+  obtenerDatosProyecto(): Observable<Proyecto[]> {
+    return this.http.get<any>(config.baseUrl + "proyecto");
+   }
+ 
+   guardarNuevoProyecto (proyecto: Proyecto): Observable<Proyecto> {
+     return this.http.post<any> (config.baseUrl + "proyecto/crear", proyecto);
+   }
+ 
+   modificarProyecto (proyecto: Proyecto): Observable<any> {
+     return this.http.put<any> (config.baseUrl + "proyecto/update", proyecto);
+   }
+ 
+   borrarProyecto(id: number): Observable<any> {
+     return this.http.delete<any> (config.baseUrl + "proyecto/" + id);
+   }
 
 
   // === CRUD DATOS HARD-SKILLS ===
