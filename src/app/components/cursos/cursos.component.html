@@ -13,7 +13,7 @@
                 {{ curso.nombre }}
             </h6>
             <p><em class="text-center ms-1 fs-6">{{ curso.lugar }}</em>
-                <button class="ms-3 text-success" target="_blank">Ver certificado</button>
+                <button [routerLink]="['/certificados']" class="ms-3 text-success" target="_blank">Ver certificado</button>
             </p>
         </div>
     </div>

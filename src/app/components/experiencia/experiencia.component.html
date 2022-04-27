@@ -1,5 +1,67 @@
 <section class="row experiencia rounded m-5 ms-5 pb-5 mt-2 d-flex text-center">
+
+ <!-- ==== MODAL EXPERIENCIA ==== -->
+ <div class="modal fade" id="experienciaForm" tabindex="-1" aria-labelledby="experienciaFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="experienciaFormLabel">Nueva experiencia:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
+            
+            <div class="mb-3 text-start">
+              <label for="empresa" class="col-sm-2 col-form-label">Empresa:</label>
+              <div class="col-sm-10">
+                <input type="text" name="empresa" formControlName="empresa" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+                <label for="cargo" class="col-sm-2 col-form-label">Cargo:</label>
+                <div class="col-sm-10">
+                  <input type="text" name="cargo" formControlName="cargo" class="form-control" required>
+                </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="pais" class="col-sm-2 col-form-label">País:</label>
+              <div class="col-sm-10">
+                <input type="text" name="pais" formControlName="pais" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="comienzo" class="col-sm-2 col-form-label">Fecha comienzo:</label>
+              <div class="col-sm-10">
+                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+              <label for="fin" class="col-sm-2 col-form-label">Fecha fin:</label>
+              <div class="col-sm-10">
+                <input type="text" name="fin" formControlName="fin" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3 text-start">
+                <label for="tareas" class="col-sm-2 col-form-label">Tareas realizadas:</label>
+                <div class="col-sm-10">
+                  <input type="text" name="tareas" formControlName="tareas" class="form-control" required>
+                </div>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning text-dark">Agregar</button>
+          <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <h5 class="h5-titulos fs-4 text-light mt-2 text-center border-bottom pb-2">Experiencia Profesional:</h5>
+    <div *ngIf="!isUserLogged" class="data-control text-start"> <!--=== quitar el "!" cuando configure bien el login ====-->
+      <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#experienciaForm">Agregar experiencia</button> 
+    </div>
     
     <div class="accordion d-flex flex-column my-4" id="accordionFlushExample">
         <div class="accordion-item mt-3" *ngFor="let experiencia of experienciaList">

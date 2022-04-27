@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { CertificadosComponent } from './components/certificados/certificados.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { LoginComponent } from './components/login/login.component';
     DatosPersonalesComponent,
     LoginComponent,
     CursosComponent,
+    CertificadosComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { config } from 'src/assets/data/config/Config';
 import { Educacion } from 'src/assets/data/Educacion';
+import { Experiencia } from 'src/assets/data/Experiencia';
 import { Proyecto } from 'src/assets/data/Proyecto';
 
 
@@ -44,8 +45,21 @@ export class DatosPortfolioService {
 
   
   // === CRUD DATOS EXPERIENCIA ===
-
-
+  obtenerDatosExperiencia(): Observable<Experiencia[]> {
+    return this.http.get<any>(config.baseUrl + "experiencia");
+   }
+ 
+   guardarNuevaExperiencia (experiencia: Experiencia): Observable<Experiencia> {
+     return this.http.post<any> (config.baseUrl + "experiencia/crear", experiencia);
+   }
+ 
+   modificarExperiencia (experiencia: Experiencia): Observable<any> {
+     return this.http.put<any> (config.baseUrl + "experiencia/update", experiencia);
+   }
+ 
+   borrarExperiencia(id: number): Observable<any> {
+     return this.http.delete<any> (config.baseUrl + "experiencia/" + id);
+   }
 
 
   // === CRUD DATOS EDUCACION ===
