@@ -1,21 +1,70 @@
+<div class="cursos">
 
-<h4 class="text-light ms-3 text-center"> CURSOS REALIZADOS:</h4>
-<button class="btn btn-sm btn-warning">Agregar curso</button>
-<div class="row text-light row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-1 justify-content-center">
-    <div class="col curso d-flex align-items-center ms-5" *ngFor="let curso of cursosList">
-        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
-        <div class="border-bottom">
-            <div class="btn-edit btn-cruz text-end">
-                <a href="#"><i class="fas fa-edit text-warning ms-3 fs-6"></i></a>
-                <a href="#"><i class="far fa-window-close text-warning p-2 fs-6"></i></a>
+     <!-- ==== MODAL CURSOS==== -->
+  <div class="modal fade" id="cursoForm" tabindex="-1" aria-labelledby="cursoFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cursoFormLabel">Nuevo curso:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="cursoForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
+            
+            <div class="mb-3">
+              <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+              <div class="col-sm-10">
+                <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+              </div>
             </div>
-            <h6 class="nombre_curso fw-bold mb-0 text-center"><i class="fa-solid fa-file-code text-success fs-4 mx-2"></i>
-                {{ curso.nombre }}
-            </h6>
-            <p><em class="text-center ms-1 fs-6">{{ curso.lugar }}</em>
-                <button [routerLink]="['/certificados']" class="ms-3 text-success" target="_blank">Ver certificado</button>
-            </p>
+            <div class="mb-3">
+              <label for="lugar" class="col-sm-2 col-form-label">Lugar:</label>
+              <div class="col-sm-10">
+                <input type="text" name="lugar" formControlName="lugar" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="duracion" class="col-sm-2 col-form-label">Duración:</label>
+              <div class="col-sm-10">
+                <input type="text" name="duracion" formControlName="duracion" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="href" class="col-sm-2 col-form-label">href:</label>
+              <div class="col-sm-10">
+                <input type="text" name="href" formControlName="href" class="form-control" required>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onNewCourse()">Agregar</button>
+          <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <h4 class="text-light ms-3 text-center">CURSOS REALIZADOS:</h4>
+    <div *ngIf="!isUserLogged" class="data-control"> <!--=== quitar el "!" cuando configure bien el login ====-->
+        <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar educación</button> 
+    </div>
+    <div class="row text-light row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-1 justify-content-center">
+        <div class="col curso d-flex align-items-center ms-5" *ngFor="let curso of cursosList; let i = index">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
+            <div class="border-bottom">
+                <div *ngIf="!isUserLogged" class="data-control btn-edit btn-cruz text-end">
+                    <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditCourse(i)"><i class="fas fa-edit bg-warning text-dark"></i></button>
+                    <button class="btn btn-right" (click)="onDeleteCourse(i)"><i class="far fa-window-close text-warning"></i></button>
+                </div>
+                <h6 class="nombre_curso fw-bold mb-0 text-center"><i class="fa-solid fa-file-code text-success fs-4 mx-2"></i>
+                    {{ curso.nombre }}
+                </h6>
+                <p><em class="text-center ms-1 fs-6">{{ curso.lugar }}</em>
+                    <button [routerLink]="['/certificados']" class="ms-3 text-success" target="_blank">Ver certificado</button>
+                </p>
+            </div>
         </div>
     </div>
-</div>
-            
+</div>           

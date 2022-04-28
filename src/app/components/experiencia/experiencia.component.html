@@ -51,7 +51,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark">Agregar</button>
+          <button type="button" class="btn btn-warning text-dark" (click)="onNewExperience()">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -77,7 +77,7 @@
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
                 <strong>{{ experiencia.cargo }}<em> {{ experiencia.pais }}</em> </strong>
-                <br> Desde {{ experiencia.comienzo }} a {{ experiencia.fin }} cubriendo período vacacional de la empresa.
+                <br> Desde {{ experiencia.comienzo }} a {{ experiencia.fin }} 
                 <hr>
                 <p class="tareas">{{ experiencia.tareas }}</p>
             </div>

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { config } from 'src/assets/data/config/Config';
+import { Curso } from 'src/assets/data/Curso';
 import { Educacion } from 'src/assets/data/Educacion';
 import { Experiencia } from 'src/assets/data/Experiencia';
 import { Proyecto } from 'src/assets/data/Proyecto';
@@ -16,6 +17,8 @@ export class DatosPortfolioService {
 
   constructor(private http: HttpClient) { }
 
+  
+  
   // === CRUD DATOS PROYECTOS ===
   obtenerDatosProyecto(): Observable<Proyecto[]> {
     return this.http.get<any>(config.baseUrl + "proyecto");
@@ -79,7 +82,24 @@ export class DatosPortfolioService {
     return this.http.delete<any> (config.baseUrl + "educacion/" + id);
   }
 
+  
   // === CRUD DATOS CURSOS REALIZADOS ===
+  obtenerDatosCursos(): Observable<Curso[]> {
+    return this.http.get<any>(config.baseUrl + "curso");
+   }
+ 
+   guardarNuevoCurso (curso: Curso): Observable<Curso> {
+     return this.http.post<any> (config.baseUrl + "curso/crear", curso);
+   }
+ 
+   modificarCurso (curso: Curso): Observable<any> {
+     return this.http.put<any> (config.baseUrl + "curso/update", curso);
+   }
+ 
+   borrarCurso(id: number): Observable<any> {
+     return this.http.delete<any> (config.baseUrl + "curso/" + id);
+   }
+
 
 }
 

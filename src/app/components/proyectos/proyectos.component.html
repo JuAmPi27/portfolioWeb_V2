@@ -39,7 +39,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark">Agregar</button>
+          <button type="button" class="btn btn-warning text-dark" (click)="onNewProyect()">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -52,7 +52,7 @@
         </h5>
 
         <div *ngIf="!isUserLogged" class="data-control"> <!--=== quitar el "!" cuando configure bien el login ====-->
-            <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onNewProyect()">Agregar proyecto</button> 
+            <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#proyectoForm">Agregar proyecto</button> 
           </div>
 
         <div class="row g-2 py-4 mt-2 row-cols-2 row-cols-lg-2 d-flex justify-content-around" *ngFor="let proyecto of proyectoList; let i = index">
