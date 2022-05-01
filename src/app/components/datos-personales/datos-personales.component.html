@@ -1,29 +1,100 @@
 <div class="container fondo-datos my-2">
-    <div class="tarjeta-datos px-4 py-4 my-4">
+
+<!-- ==== MODAL DATOS PERSONALES ==== -->
+<div class="modal fade" id="educationForm" tabindex="-1" aria-labelledby="educationFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="educationFormLabel">Nueva educación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="datosPersonalesForm" (ngSubmit)="onSubmit()">
+                <input type="hidden" name="id" formControlName="id">
+                <div class="mb-3">
+                    <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="Apellido" class="col-sm-2 col-form-label">Apellido:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="Apellido" formControlName="Apellido" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="profesion" class="col-sm-2 col-form-label">Profesión:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="profesion" formControlName="profesion" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="ubicacion" class="col-sm-2 col-form-label">Lugar de residencia:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="ubicacion" formControlName="ubicacion" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="email" formControlName="email" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="tel" class="col-sm-2 col-form-label">Teléfono:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="tel" formControlName="tel" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="acercaDe" class="col-sm-2 col-form-label">Acerca de mi:</label>>
+                    <div class="col-sm-10">
+                        <input type="text" name="acercaDe" formControlName="acercaDe" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="img" class="col-sm-2 col-form-label">Foto:</label>>
+                    <div class="col-sm-10">
+                        <input type="text" name="img" formControlName="img" class="form-control" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onNewDatoPersonal()">Agregar</button>
+          <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+                
+
+    <div *ngFor="let datoPersonal of datosPersonalesList; let i = index" class="tarjeta-datos px-4 py-4 my-4">
         <div class="mt-1">
             <a href="#"><i class="fas fa-edit text-dark fs-6"></i></a>
             <a href="#"><i class="far fa-window-close text-dark ms-2 fs-6"></i></a>
         </div>
-        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" [src]="miPortfolio.img">
+        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="/assets/ {{ datoPersonal.img }}">
         <div class="lista-datos col-md-11 pe-4 px-2 mt-5 text-end">
             <br>
             <a href="#"><i class="fas fa-edit text-success ms-4 fs-6"></i></a>
             <a href="#"><i class="far fa-window-close text-success ms-2 fs-6"></i></a>
             <h4 class="nombre mt-2 fs-2">
-                <i class="fa-solid fa-user text-warning fs-4"></i> {{ miPortfolio.apellido }} {{ miPortfolio.nombre }}
+                <i class="fa-solid fa-user text-warning fs-4"></i> {{ datoPersonal.apellido }} {{ datoPersonal.nombre }}
             </h4>
             <h5 class="titulo mt-3 fs-3">
                 <i class="fa-solid fa-laptop-code text-warning fs-4"></i>
-                <strong> {{ miPortfolio.certificado }}</strong>
+                <strong> {{ datoPersonal.profesion }}</strong>
             </h5>
             <h6 class="email mt-3 fs-5">
-                <i class="fa-regular fa-envelope text-warning fs-4 me-2"></i> {{ miPortfolio.email }}
+                <i class="fa-regular fa-envelope text-warning fs-4 me-2"></i> {{ datoPersonal.email }}
             </h6>
             <h6 class="tel mt-4 me-5 fs-5"><i class="fas fa-mobile-alt text-warning fs-5 me-1"></i>
-                {{ miPortfolio.tel }}
+                {{ datoPersonal.tel }}
             </h6>
             <p class="lugar mt-3 fs-5">
-                <i class="fa-solid fa-location-dot text-warning fs-4"></i> {{ miPortfolio.ubicacion }}
+                <i class="fa-solid fa-location-dot text-warning fs-4"></i> {{ datoPersonal.ubicacion }}
             </p>
             <br>
         </div>
@@ -35,7 +106,7 @@
                 <a href="#"><i class="far fa-window-close text-light ms-2 fs-6"></i></a>
             </div>
             <br>
-            <p class="acerca-de text-success text-center mb-4 fs-5">{{ miPortfolio.acerca }}</p>
+            <p class="acerca-de text-success text-center mb-4 fs-5">{{ datoPersonal.acercaDe }}</p>
             <br>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
                 <button type="button" [routerLink]="['/experiencia']" class="btn btn-dark text-light btn-sm border border-1 px-4 gap-3">Ir a experiencias</button>

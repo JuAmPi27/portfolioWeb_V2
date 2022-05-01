@@ -96,7 +96,7 @@ export class EducacionComponent implements OnInit {
       escuela: educacion.escuela,
       comienzo: educacion.comienzo,
       fin: educacion.fin,
-    })
+    });
   }
 
 }

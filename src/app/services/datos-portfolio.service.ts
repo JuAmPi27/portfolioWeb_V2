@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { config } from 'src/assets/data/config/Config';
 import { Curso } from 'src/assets/data/Curso';
+import { DatosPersonales } from 'src/assets/data/DatosPersonales';
 import { Educacion } from 'src/assets/data/Educacion';
 import { Experiencia } from 'src/assets/data/Experiencia';
 import { Proyecto } from 'src/assets/data/Proyecto';
@@ -18,8 +19,25 @@ export class DatosPortfolioService {
   constructor(private http: HttpClient) { }
 
   
-  
-  // === CRUD DATOS PROYECTOS ===
+  // === CRUD DATOS PERSONALES === 
+  obtenerDatosPersonales(): Observable<DatosPersonales[]> {
+    return this.http.get<any>(config.baseUrl + "datosPersonales");
+   }
+ 
+   guardarNuevoDatosPersonales (datosPersonales: DatosPersonales): Observable<DatosPersonales> {
+     return this.http.post<any> (config.baseUrl + "datosPersonales/crear", datosPersonales);
+   }
+ 
+   modificarDatosPersonales (datosPersonales: DatosPersonales): Observable<any> {
+     return this.http.put<any> (config.baseUrl + "datosPersonales/update", datosPersonales);
+   }
+ 
+   borrarDatosPersonales(id: number): Observable<any> {
+     return this.http.delete<any> (config.baseUrl + "datosPersonales/" + id);
+   }
+
+
+  // === CRUD PROYECTOS ===
   obtenerDatosProyecto(): Observable<Proyecto[]> {
     return this.http.get<any>(config.baseUrl + "proyecto");
    }
@@ -37,17 +55,17 @@ export class DatosPortfolioService {
    }
 
 
-  // === CRUD DATOS HARD-SKILLS ===
+  // === CRUD HARD-SKILLS ===
 
 
 
 
-  // === CRUD DATOS SOFT-SKILLS ===
+  // === CRUD SOFT-SKILLS ===
 
 
 
   
-  // === CRUD DATOS EXPERIENCIA ===
+  // === CRUD EXPERIENCIA ===
   obtenerDatosExperiencia(): Observable<Experiencia[]> {
     return this.http.get<any>(config.baseUrl + "experiencia");
    }
@@ -65,7 +83,7 @@ export class DatosPortfolioService {
    }
 
 
-  // === CRUD DATOS EDUCACION ===
+  // === CRUD EDUCACION ===
   obtenerDatosEducacion(): Observable<Educacion[]> {
    return this.http.get<any>(config.baseUrl + "educacion");
   }
@@ -83,7 +101,7 @@ export class DatosPortfolioService {
   }
 
   
-  // === CRUD DATOS CURSOS REALIZADOS ===
+  // === CRUD CURSOS ===
   obtenerDatosCursos(): Observable<Curso[]> {
     return this.http.get<any>(config.baseUrl + "curso");
    }

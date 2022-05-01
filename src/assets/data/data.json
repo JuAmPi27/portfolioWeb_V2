@@ -1,12 +1,12 @@
 {
     "nombre": "Juan Pablo",
     "apellido": "Barnetche",
-    "img": "assets/foto_carnet.jpg",
-    "certificado": "Full Stack developer JR",
+    "img": "foto_carnet.jpg",
+    "profesion": "Full Stack developer JR",
     "ubicacion": "Buenos Aires, Argentina",
     "email": "jpbarnetche27@gmail.com",
     "tel": "11-5944-2917",
-    "acerca": "Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder ser parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido",
+    "acercaDe": "Profesional, responsable, eficiente y recién certificado como Full Stack developer JR. Con muchas ganas de introducirme en este hermoso mundo del desarrollo web desde el lugar que me toque y poder ser parte de proyectos que me sigan formando tanto personal como profesionalmente. Soy organizado, comunicativo, con buenas habilidades de trabajo en equipo y de aprendizaje rápido",
 
     "educacion": [
         {
