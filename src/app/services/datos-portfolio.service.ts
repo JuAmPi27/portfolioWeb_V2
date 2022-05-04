@@ -6,7 +6,9 @@ import { Curso } from 'src/assets/data/Curso';
 import { DatosPersonales } from 'src/assets/data/DatosPersonales';
 import { Educacion } from 'src/assets/data/Educacion';
 import { Experiencia } from 'src/assets/data/Experiencia';
+import { HardSkill } from 'src/assets/data/HardSkill';
 import { Proyecto } from 'src/assets/data/Proyecto';
+import { SoftSkill } from 'src/assets/data/SoftSkill';
 
 
 
@@ -56,15 +58,41 @@ export class DatosPortfolioService {
 
 
   // === CRUD HARD-SKILLS ===
-
-
+  obtenerDatosHardSkill(): Observable<HardSkill[]> {
+    return this.http.get<any>(config.baseUrl + "hardSkill");
+   }
+ 
+   guardarNuevaHardSkill (hard: HardSkill): Observable<HardSkill> {
+     return this.http.post<any> (config.baseUrl + "hardSkill/crear", hard);
+   }
+ 
+   modificarHardSkill (hard: HardSkill): Observable<any> {
+     return this.http.put<any> (config.baseUrl + "hardSkill/update", hard);
+   }
+ 
+   borrarHardSkill(id: number): Observable<any> {
+     return this.http.delete<any> (config.baseUrl + "hardSkill/" + id);
+   }
 
 
   // === CRUD SOFT-SKILLS ===
+  obtenerDatosSoftSkill(): Observable<SoftSkill[]> {
+    return this.http.get<any>(config.baseUrl + "softSkill");
+   }
+ 
+   guardarNuevaSoftSkill (soft: SoftSkill): Observable<SoftSkill> {
+     return this.http.post<any> (config.baseUrl + "softSkill/crear", soft);
+   }
+ 
+   modificarSoftSkill (soft: SoftSkill): Observable<any> {
+     return this.http.put<any> (config.baseUrl + "softSkill/update", soft);
+   }
+ 
+   borrarSoftSkill(id: number): Observable<any> {
+     return this.http.delete<any> (config.baseUrl + "softSkill/" + id);
+   }
 
 
-
-  
   // === CRUD EXPERIENCIA ===
   obtenerDatosExperiencia(): Observable<Experiencia[]> {
     return this.http.get<any>(config.baseUrl + "experiencia");

@@ -15,6 +15,8 @@ import { CursosComponent } from './components/cursos/cursos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { CertificadosComponent } from './components/certificados/certificados.component';
+import { HardSkillComponent } from './components/hard-skill/hard-skill.component';
+import { SoftSkillComponent } from './components/soft-skill/soft-skill.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { CertificadosComponent } from './components/certificados/certificados.co
     LoginComponent,
     CursosComponent,
     CertificadosComponent,
+    HardSkillComponent,
+    SoftSkillComponent,
   ],
   imports: [
     BrowserModule,

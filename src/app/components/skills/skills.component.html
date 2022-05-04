@@ -1,34 +1,12 @@
 <section class="row skills d-flex mt-1 mb-2 p-3 rounded">
-    <div class="contenedor-skills">
-        <div class="row d-flex justify-content-around">
-           
-            <!-- ======hard skills====== -->
-            <div class="col-5 hard-s">
-                <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-1 ms-3 text-center"> Hard-Skills</h5>
-                <div class="mt-4" *ngFor="let hardSkill of hardSkillList">
-                    <h6> {{ hardSkill.nombre }} </h6>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-            <!-- ======soft skills =======-->
-            <div class="col-5 soft-s">
-                <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-1 ms-3 text-center">Soft-Skills</h5>
-                <div class="mt-4" *ngFor="let softSkill of softSkillList">
-                    <h6> {{ softSkill.nombre }} </h6>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: softSkill.progreso  + '%' }" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </div>
-     <div class="text-center mt-3">
+
+  <!-- ==== HARD-SKILLS ==== -->
+ <app-hard-skill></app-hard-skill>
+     
+  <!-- ==== SOFT-SKILLS ==== -->
+  <app-soft-skill></app-soft-skill>
+     
+    <div class="text-center mt-3">
         <a [routerLink]="['/inicio']" ><i class="datos-icon fa-solid fa-house text-success ms-2 fs-4"></i></a>    
     </div>
 </section>

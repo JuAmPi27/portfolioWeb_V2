@@ -1,0 +1,51 @@
+ <!-- ==== MODAL SOFT-SKILLS ==== -->
+ <div class="modal fade" id="softSkillForm" tabindex="-1" aria-labelledby="softSkillFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="softSkillFormLabel">Nueva soft-skill</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="softSkillForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
+            
+            <div class="mb-3">
+              <label for="nombre" class="col-sm-2 col-form-label">Nombre SS:</label>
+              <div class="col-sm-10">
+                <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="progreso" class="col-sm-2 col-form-label">Progreso( % ):</label>
+              <div class="col-sm-10">
+                <input type="text" name="progreso" formControlName="progreso" class="form-control" required>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#softSkillForm" (click)="onNewSoftSkill()">Agregar</button>
+          <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="contenedor-skills">
+    <div class="row d-flex justify-content-around">
+     <!-- ======soft skills =======-->
+        <div class="col-5 soft-s">
+            <button class="btn btn-sm btn-warning text-dark">Agregar soft-skill</button>
+            <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-1 ms-3 text-center">Soft-Skills</h5>
+            <div class="mt-4" *ngFor="let softSkill of softSkillList; let i = index">
+                <h6> {{ softSkill.nombre }} </h6>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: softSkill.progreso  + '%' }" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
