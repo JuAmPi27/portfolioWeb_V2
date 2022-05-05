@@ -51,7 +51,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" (click)="onNewExperience()">Agregar</button>
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#experienciaForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -59,18 +59,18 @@
   </div>
 
     <h5 class="h5-titulos fs-4 text-light mt-2 text-center border-bottom pb-2">Experiencia Profesional:</h5>
-    <div *ngIf="!isUserLogged" class="data-control text-start"> <!--=== quitar el "!" cuando configure bien el login ====-->
-      <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#experienciaForm">Agregar experiencia</button> 
+    <div *ngIf="isUserLogged" class="data-control text-start">
+      <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onNewExperience()">Agregar experiencia</button> 
     </div>
     
     <div class="accordion d-flex flex-column my-4" id="accordionFlushExample">
-        <div class="accordion-item mt-3" *ngFor="let experiencia of experienciaList">
+        <div class="accordion-item mt-3" *ngFor="let experiencia of experienciaList; let i = index">
             <h5 class="accordion-header" id="flush-headingOne">
                 <button class="empresa accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     <h6 class="text-dark text-uppercase">{{ experiencia.empresa }}</h6>
-                    <div class="btn-edit btn-cruz text-end">
-                        <a href="#"><i class="fas fa-edit text-dark ms-3 fs-6"></i></a>
-                        <a href="#"><i class="far fa-window-close text-dark p-1 fs-6"></i></a>
+                    <div *ngIf="isUserLogged" class="data-control text-end"> 
+                      <button class="btn" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onEditExperience(i);"><i class="fas fa-edit text-dark ms-3 fs-6"></i></button>
+                      <button class="btn" (click)="onDeleteExperience(i);"><i class="fa-solid fa-trash-can text-dark p-1 fs-6"></i></button>
                     </div>
                 </button>
             </h5>

@@ -35,8 +35,8 @@
       <div class="contenedor-skills">
         <div class="row d-flex justify-content-around">
            <!-- ======hard skills====== -->
-            <div class="col-5 hard-s">
-                <button class="btn btn-sm btn-warning text-dark">Agregar hard-skill</button>
+            <div *ngIf="isUserLogged" class="data-control col-5 hard-s">
+                <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm">Agregar hard-skill</button>
                 <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-1 ms-3 text-center"> Hard-Skills</h5>
                 <div class="mt-4" *ngFor="let hardSkill of hardSkillList; let i = index">
                     <h6> {{ hardSkill.nombre }} </h6>

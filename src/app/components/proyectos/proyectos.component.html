@@ -39,7 +39,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" (click)="onNewProyect()">Agregar</button>
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onNewProyect()">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -51,8 +51,8 @@
             <a href="#"><i class="fas fa-edit text-warning me-2 fs-6"></i></a>Proyectos
         </h5>
 
-        <div *ngIf="!isUserLogged" class="data-control"> <!--=== quitar el "!" cuando configure bien el login ====-->
-            <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#proyectoForm">Agregar proyecto</button> 
+        <div *ngIf="isUserLogged" class="data-control">
+            <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onNewProyect();">Agregar proyecto</button> 
           </div>
 
         <div class="row g-2 py-4 mt-2 row-cols-2 row-cols-lg-2 d-flex justify-content-around" *ngFor="let proyecto of proyectoList; let i = index">
@@ -64,9 +64,9 @@
                 <p class="text-success fs-5">{{ proyecto.descripcion }} <em class="text-light"> ({{ proyecto.fechaRealizacion }})</em></p>
                 <a [href]="proyecto.github"  target="_blank" class="icon-link text-warning ms-4 mt-2"><i class="fa-solid fa-code text-warning"></i> Ver código en github...</a>
                 <br>
-                <div class="my-2 me-2 text-end">
-                    <a href="#"><i class="fas fa-edit text-warning fs-6"></i></a>
-                    <a href="#"><i class="far fa-window-close text-warning ms-2 fs-6"></i></a>
+                <div *ngIf="isUserLogged" class="data-control text-end"> 
+                  <button class="btn" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onEditProyect(i)"><i class="fas fa-edit text-warning fs-6"></i></button>
+                  <button class="btn" (click)="onDeleteProyect(i)"><i class="fa-solid fa-trash-can text-warning ms-2 fs-6"></i></button>
                 </div>
             </div>
         </div>
@@ -76,6 +76,7 @@
     </div>
 </section>
         
-        
+<a href="#"></a>
+<a href="#"></a>   
 
 

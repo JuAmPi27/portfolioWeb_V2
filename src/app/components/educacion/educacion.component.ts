@@ -38,7 +38,6 @@ export class EducacionComponent implements OnInit {
     this.datosPortfolio.obtenerDatosEducacion().subscribe( 
       (data) => {
       this.educacionList = data;
-      console.log(data); //para verificar por consola que nos llega bien la data solicitada
     });
   }
 

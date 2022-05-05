@@ -1,5 +1,5 @@
 <div class="cursos">
-
+  
      <!-- ==== MODAL CURSOS==== -->
   <div class="modal fade" id="cursoForm" tabindex="-1" aria-labelledby="cursoFormLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -25,13 +25,13 @@
               </div>
             </div>
             <div class="mb-3">
-              <label for="duracion" class="col-sm-2 col-form-label">Duración:</label>
+              <label for="duracion" class="col-sm-2 col-form-label">Duración (Hs):</label>
               <div class="col-sm-10">
                 <input type="text" name="duracion" formControlName="duracion" class="form-control" required>
               </div>
             </div>
             <div class="mb-3">
-              <label for="href" class="col-sm-2 col-form-label">href:</label>
+              <label for="href" class="col-sm-2 col-form-label">certificado:</label>
               <div class="col-sm-10">
                 <input type="text" name="href" formControlName="href" class="form-control" required>
               </div>
@@ -47,16 +47,16 @@
   </div>
 
     <h4 class="text-light ms-3 text-center">CURSOS REALIZADOS:</h4>
-    <div *ngIf="!isUserLogged" class="data-control"> <!--=== quitar el "!" cuando configure bien el login ====-->
-        <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar educación</button> 
+    <div *ngIf="isUserLogged" class="data-control"> 
+        <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#cursoForm">Agregar curso</button> 
     </div>
     <div class="row text-light row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-1 justify-content-center">
         <div class="col curso d-flex align-items-center ms-5" *ngFor="let curso of cursosList; let i = index">
             <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
             <div class="border-bottom">
                 <div *ngIf="!isUserLogged" class="data-control btn-edit btn-cruz text-end">
-                    <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditCourse(i)"><i class="fas fa-edit bg-warning text-dark"></i></button>
-                    <button class="btn btn-right" (click)="onDeleteCourse(i)"><i class="far fa-window-close text-warning"></i></button>
+                    <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onEditCourse(i)"><i class="fas fa-edit bg-warning text-dark"></i></button>
+                    <button class="btn btn-right" (click)="onDeleteCourse(i)"><i class="fa-solid fa-trash-can text-warning"></i></button>
                 </div>
                 <h6 class="nombre_curso fw-bold mb-0 text-center"><i class="fa-solid fa-file-code text-success fs-4 mx-2"></i>
                     {{ curso.nombre }}

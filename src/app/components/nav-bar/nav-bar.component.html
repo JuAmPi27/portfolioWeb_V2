@@ -50,7 +50,7 @@
             
             <div>
                 <button *ngIf="!isUserLogged" type="button" [routerLink]="['/login']" class="btn btn-outline-dark ms-5 mt-2"><b class="btn-login">Login</b></button>
-                <button *ngIf="isUserLogged" type="button" [routerLink]="['/logout']" class="btn btn-outline-success ms-5 mt-2" (click)="logout()"><b class="btn-login">Logout</b></button>
+                <button *ngIf="isUserLogged" type="button" class="btn btn-outline-success ms-5 mt-2" (click)="logout()"><b class="btn-login">Logout</b></button>
             </div>
         </div>
     </nav>

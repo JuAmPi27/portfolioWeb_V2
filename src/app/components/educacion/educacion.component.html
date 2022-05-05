@@ -39,7 +39,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onNewEducation()">Agregar</button>
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -47,15 +47,16 @@
   </div>
 <!-- ===================ver tema de los botones y metodos: onNewEducation, onDeleteEducation etc para saber donde ponerlos====================== -->
     <h5 class="pb-2 h5-titulos text-light text-center fs-3">Educación</h5>
-    <div *ngIf="!isUserLogged" class="data-control"> <!--=== quitar el "!" cuando configure bien el login ====-->
-      <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar educación</button> 
+    <div *ngIf="isUserLogged" class="data-control">
+      <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onNewEducation();">Agregar educación</button> 
     </div>
-   <!-- ====Educacion=== -->
+   
+    <!-- ====Educacion=== -->
     <div class="row align-items-md-stretch my-3 pb-3 border-bottom justify-content-center">
         <div class="col-md-4" *ngFor="let educacion of educacionList; let i = index">
-          <div *ngIf="!isUserLogged" class="data-control text-end"> <!--sacar el "!" para el login-->
-            <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)"><i class="fas fa-edit bg-warning text-dark"></i></button>
-            <button class="btn btn-right" (click)="onDeleteEducation(i)"><i class="far fa-window-close text-warning"></i></button>
+          <div *ngIf="isUserLogged" class="data-control text-end"> 
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i);"><i class="fas fa-edit bg-warning text-dark"></i></button>
+            <button class="btn" (click)="onDeleteEducation(i);"><i class="fa-solid fa-trash-can bg-warning text-dark"></i></button>
           </div>
           <div class="h-100 p-4 text-center text-dark bg-warning rounded-2">
             <h5 id="edu-escuela"><i class="fa-solid fa-graduation-cap text-dark"></i> {{ educacion.escuela }}</h5>

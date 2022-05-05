@@ -35,8 +35,8 @@
 <div class="contenedor-skills">
     <div class="row d-flex justify-content-around">
      <!-- ======soft skills =======-->
-        <div class="col-5 soft-s">
-            <button class="btn btn-sm btn-warning text-dark">Agregar soft-skill</button>
+        <div *ngIf="isUserLogged" class="data-control col-5 soft-s">
+            <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#softSkillForm">Agregar soft-skill</button>
             <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-1 ms-3 text-center">Soft-Skills</h5>
             <div class="mt-4" *ngFor="let softSkill of softSkillList; let i = index">
                 <h6> {{ softSkill.nombre }} </h6>

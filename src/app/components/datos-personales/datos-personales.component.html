@@ -71,15 +71,16 @@
                 
 
     <div *ngFor="let datoPersonal of datosPersonalesList; let i = index" class="tarjeta-datos px-4 py-4 my-4">
-        <div class="mt-1">
-            <a href="#"><i class="fas fa-edit text-dark fs-6"></i></a>
-            <a href="#"><i class="far fa-window-close text-dark ms-2 fs-6"></i></a>
+        <div *ngIf="isUserLogged" class="data-control">
+            <button class="btn btn-sm btn-dark me-2" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar datos personales</button> 
         </div>
         <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="/assets/ {{ datoPersonal.img }}">
         <div class="lista-datos col-md-11 pe-4 px-2 mt-5 text-end">
             <br>
-            <a href="#"><i class="fas fa-edit text-success ms-4 fs-6"></i></a>
-            <a href="#"><i class="far fa-window-close text-success ms-2 fs-6"></i></a>
+            <div *ngIf="isUserLogged" class="data-control text-end"> 
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onEditDatoPersonal(i)"><i class="fas fa-edit text-success ms-4 fs-6"></i></button>
+                <button class="btn" (click)="onDeleteDatoPersonal(i)"><i class="fa-solid fa-trash-can text-success ms-2 fs-6"></i></button>
+            </div>
             <h4 class="nombre mt-2 fs-2">
                 <i class="fa-solid fa-user text-warning fs-4"></i> {{ datoPersonal.apellido }} {{ datoPersonal.nombre }}
             </h4>
@@ -101,10 +102,6 @@
         <br>
         <hr>
         <div class="col-lg-11 ms-5">
-            <div class="mb-3 text-end">
-                <a href="#"><i class="fas fa-edit text-light fs-6"></i></a>
-                <a href="#"><i class="far fa-window-close text-light ms-2 fs-6"></i></a>
-            </div>
             <br>
             <p class="acerca-de text-success text-center mb-4 fs-5">{{ datoPersonal.acercaDe }}</p>
             <br>
