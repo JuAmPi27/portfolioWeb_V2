@@ -39,17 +39,15 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onNewProyect()">Agregar</button>
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#proyectoForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 
     <div class=" py-3 text-light">
-        <h5 class="h5-titulos text-center pb-2 border-bottom">
-            <a href="#"><i class="fas fa-edit text-warning me-2 fs-6"></i></a>Proyectos
-        </h5>
+        <h5 class="h5-titulos text-center pb-2 border-bottom">Proyectos</h5>
 
         <div *ngIf="isUserLogged" class="data-control">
             <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#proyectoForm" (click)="onNewProyect();">Agregar proyecto</button> 
@@ -75,8 +73,6 @@
         <a [routerLink]="['/inicio']" ><i class="datos-icon fa-solid fa-house text-success ms-2 fs-4"></i></a>    
     </div>
 </section>
-        
-<a href="#"></a>
-<a href="#"></a>   
+         
 
 

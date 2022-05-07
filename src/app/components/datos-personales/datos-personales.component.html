@@ -74,7 +74,7 @@
         <div *ngIf="isUserLogged" class="data-control">
             <button class="btn btn-sm btn-dark me-2" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar datos personales</button> 
         </div>
-        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="/assets/ {{ datoPersonal.img }}">
+        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="assets/ {{ datoPersonal.img }}">
         <div class="lista-datos col-md-11 pe-4 px-2 mt-5 text-end">
             <br>
             <div *ngIf="isUserLogged" class="data-control text-end"> 
@@ -103,7 +103,7 @@
         <hr>
         <div class="col-lg-11 ms-5">
             <br>
-            <p class="acerca-de text-success text-center mb-4 fs-5">{{ datoPersonal.acercaDe }}</p>
+            <textarea class="acerca-de text-success text-center mb-4 fs-5">{{ datoPersonal.acercaDe }}</textarea>
             <br>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
                 <button type="button" [routerLink]="['/experiencia']" class="btn btn-dark text-light btn-sm border border-1 px-4 gap-3">Ir a experiencias</button>
