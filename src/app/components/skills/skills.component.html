@@ -1,11 +1,9 @@
 <section class="row skills d-flex mt-1 mb-2 p-3 rounded">
   <h5 class="pb-2 h5-titulos text-light text-center fs-3">Habilidades</h5>
-  <!-- ==== HARD-SKILLS ==== -->
- <app-hard-skill></app-hard-skill>
-     
-  <!-- ==== SOFT-SKILLS ==== -->
-  <app-soft-skill></app-soft-skill>
-     
+  <div class="row d-flex justify-content-around">
+    <app-hard-skill class="col-5 justify-content-around"></app-hard-skill>
+    <app-soft-skill class="col-5 justify-content-around"></app-soft-skill>
+</div>   
     <div class="text-center mt-3">
         <a [routerLink]="['/inicio']" ><i class="datos-icon fa-solid fa-house text-success ms-2 fs-4"></i></a>    
     </div>

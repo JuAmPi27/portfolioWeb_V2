@@ -25,7 +25,7 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm" (click)="onNewHardSkill()">Agregar</button>
+              <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm">Agregar</button>
               <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
@@ -33,18 +33,16 @@
       </div>
 
       <div class="contenedor-skills">
-        <div class="row d-flex justify-content-around">
            <!-- ======hard skills====== -->
-            <div *ngIf="isUserLogged" class="data-control col-5 hard-s">
-                <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm">Agregar hard-skill</button>
-                <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-1 ms-3 text-center"> Hard-Skills</h5>
+          <div *ngIf="isUserLogged" class="data-control hard-s">
+              <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm" (click)="onNewHardSkill()">Agregar hard-skill</button>
+              <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-2 ms-3 text-center"> Hard-Skills</h5>
                 <div class="mt-4" *ngFor="let hardSkill of hardSkillList; let i = index">
-                    <h6> {{ hardSkill.nombre }} </h6>
+                  <h6> {{ hardSkill.nombre }} </h6>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">
-                        </div>
+                      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">
+                      </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+          </div>
+  </div>

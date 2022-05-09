@@ -42,9 +42,6 @@ export class LoginComponent implements OnInit {
           this.loginError = true;
       }
     );
-    
-    /* if(this.authService.login(this.formLogin.value))
-      this.router.navigate(['portfolio']); */
   }
 
   get Email() {

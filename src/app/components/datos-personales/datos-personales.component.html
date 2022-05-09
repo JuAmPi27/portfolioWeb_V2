@@ -62,7 +62,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onNewDatoPersonal()">Agregar</button>
+          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -72,9 +72,9 @@
 
     <div *ngFor="let datoPersonal of datosPersonalesList; let i = index" class="tarjeta-datos px-4 py-4 my-4">
         <div *ngIf="isUserLogged" class="data-control">
-            <button class="btn btn-sm btn-dark me-2" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar datos personales</button> 
+            <button class="btn btn-sm btn-dark text-warning me-2" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onNewDatoPersonal()">Agregar datos personales</button> 
         </div>
-        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="assets/ {{ datoPersonal.img }}">
+        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="/assets/ {{ datoPersonal.img }}">
         <div class="lista-datos col-md-11 pe-4 px-2 mt-5 text-end">
             <br>
             <div *ngIf="isUserLogged" class="data-control text-end"> 
@@ -103,7 +103,7 @@
         <hr>
         <div class="col-lg-11 ms-5">
             <br>
-            <textarea class="acerca-de text-success text-center mb-4 fs-5">{{ datoPersonal.acercaDe }}</textarea>
+            <p class="acerca-de text-success text-center mb-4 fs-5">{{ datoPersonal.acercaDe }}</p>
             <br>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-end">
                 <button type="button" [routerLink]="['/experiencia']" class="btn btn-dark text-light btn-sm border border-1 px-4 gap-3">Ir a experiencias</button>
