@@ -62,7 +62,7 @@
             </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar</button>
+          <button type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -74,7 +74,7 @@
         <div *ngIf="isUserLogged" class="data-control">
             <button class="btn btn-sm btn-dark text-warning me-2" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onNewDatoPersonal()">Agregar datos personales</button> 
         </div>
-        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="/assets/ {{ datoPersonal.img }}">
+        <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="/assets/images/{{ datoPersonal.img }}">
         <div class="lista-datos col-md-11 pe-4 px-2 mt-5 text-end">
             <br>
             <div *ngIf="isUserLogged" class="data-control text-end"> 
@@ -86,7 +86,7 @@
             </h4>
             <h5 class="titulo mt-3 fs-3">
                 <i class="fa-solid fa-laptop-code text-warning fs-4"></i>
-                <strong> {{ datoPersonal.profesion }}</strong>
+                <strong>{{ datoPersonal.profesion }}</strong>
             </h5>
             <h6 class="email mt-3 fs-5">
                 <i class="fa-regular fa-envelope text-warning fs-4 me-2"></i> {{ datoPersonal.email }}
@@ -95,7 +95,7 @@
                 {{ datoPersonal.tel }}
             </h6>
             <p class="lugar mt-3 fs-5">
-                <i class="fa-solid fa-location-dot text-warning fs-4"></i> {{ datoPersonal.ubicacion }}
+                <i class="fa-solid fa-location-dot text-warning fs-4"></i>{{ datoPersonal.ubicacion }}
             </p>
             <br>
         </div>

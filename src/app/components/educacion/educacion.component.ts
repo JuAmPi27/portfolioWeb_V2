@@ -22,10 +22,10 @@ export class EducacionComponent implements OnInit {
 
       this.educationForm = this.formBuilder.group({
        id: [''],
-       titulo: ['', [Validators.required]],
-       escuela: ['', [Validators.required]],
-       comienzo: ['', [Validators.required]] ,
-       fin: ['', [Validators.required]] 
+       titulo: ['', [Validators.required, Validators.minLength(4)]],
+       escuela: ['', [Validators.required, Validators.minLength(4)]],
+       comienzo: ['', [Validators.required, Validators.minLength(4)]] ,
+       fin: ['', [Validators.required, Validators.minLength(4)]] 
       });
     }
 

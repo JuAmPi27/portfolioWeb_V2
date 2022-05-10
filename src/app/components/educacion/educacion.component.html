@@ -39,13 +39,13 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar</button>
+          <button type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
     </div>
   </div>
-<!-- ===================ver tema de los botones y metodos: onNewEducation, onDeleteEducation etc para saber donde ponerlos====================== -->
+  
     <h5 class="pb-2 h5-titulos text-light text-center fs-3">Educación</h5>
     <div *ngIf="isUserLogged" class="data-control">
       <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onNewEducation();">Agregar educación</button> 

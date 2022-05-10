@@ -17,7 +17,7 @@
               </div>
             </div>
             <div class="mb-3">
-              <label for="progreso" class="col-sm-2 col-form-label">Progreso( % ):</label>
+              <label for="progreso" class="col-sm-2 col-form-label">Progreso(%):</label>
               <div class="col-sm-10">
                 <input type="text" name="progreso" formControlName="progreso" class="form-control" required>
               </div>
@@ -33,12 +33,17 @@
   </div>
 
 <div class="contenedor-skills">
-     <!-- ======soft skills =======-->
+     <!-- ======SOFT SKILLS =======-->
         <div *ngIf="isUserLogged" class="data-control soft-s">
             <button class="btn btn-sm btn-warning text-dark text-end" data-bs-toggle="modal" data-bs-target="#softSkillForm" (click)="onNewSoftSkill()">Agregar soft-skill</button>
             <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-2 ms-3 text-center">Soft-Skills</h5>
             <div class="mt-4" *ngFor="let softSkill of softSkillList; let i = index">
                 <h6> {{ softSkill.nombre }} </h6>
+                <!--PROBAR SI SALEN BIEN LOS BOTONES DE EDITAR Y BORRAR EN CADA SKILL-->
+                <div *ngIf="isUserLogged" class="data-control text-end"> 
+                  <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditSoftSkill(i);"><i class="fas fa-edit bg-warning text-dark"></i></button>
+                  <button class="btn" (click)="onDeleteSoftSkill(i);"><i class="fa-solid fa-trash-can bg-warning text-dark"></i></button>
+                </div>
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: softSkill.progreso  + '%' }" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
                     </div>

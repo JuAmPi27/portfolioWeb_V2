@@ -17,7 +17,7 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <label for="progreso" class="col-sm-2 col-form-label">Progreso( % ):</label>
+                  <label for="progreso" class="col-sm-2 col-form-label">Progreso(%):</label>
                   <div class="col-sm-10">
                     <input type="text" name="progreso" formControlName="progreso" class="form-control" required>
                   </div>
@@ -25,7 +25,7 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm">Agregar</button>
+              <button type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm">Agregar</button>
               <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
@@ -33,12 +33,17 @@
       </div>
 
       <div class="contenedor-skills">
-           <!-- ======hard skills====== -->
+           <!-- ======HARD SKILLS====== -->
           <div *ngIf="isUserLogged" class="data-control hard-s">
               <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm" (click)="onNewHardSkill()">Agregar hard-skill</button>
               <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-2 ms-3 text-center"> Hard-Skills</h5>
                 <div class="mt-4" *ngFor="let hardSkill of hardSkillList; let i = index">
                   <h6> {{ hardSkill.nombre }} </h6>
+                  <!--PROBAR SI SALEN BIEN LOS BOTONES DE EDITAR Y BORRAR EN CADA SKILL-->
+                <div *ngIf="isUserLogged" class="data-control text-end"> 
+                  <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditHardSkill(i);"><i class="fas fa-edit bg-warning text-dark"></i></button>
+                  <button class="btn" (click)="onDeleteHardSkill(i);"><i class="fa-solid fa-trash-can bg-warning text-dark"></i></button>
+                </div>
                     <div class="progress">
                       <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">
                       </div>
