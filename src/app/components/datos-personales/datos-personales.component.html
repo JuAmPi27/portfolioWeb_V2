@@ -1,11 +1,11 @@
 <div class="container fondo-datos my-2">
 
 <!-- ==== MODAL DATOS PERSONALES ==== -->
-<div class="modal fade" id="educationForm" tabindex="-1" aria-labelledby="educationFormLabel" aria-hidden="true">
+<div class="modal fade" id="datosPersonalesForm" tabindex="-1" aria-labelledby="datosPersonalesFormLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="educationFormLabel">Nueva educación</h5>
+          <h5 class="modal-title" id="datosPersonalesFormLabel">Nueva educación</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -14,55 +14,80 @@
                 <div class="mb-3">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="nombre" formControlName="nombre" class="form-control" required>
+                        <input type="text" name="nombre" formControlName="nombre" class="form-control" [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid': !Nombre?.errors && Nombre?.touched}" required> <!--VER SI EL "REQUIRED" ES NECESARIO ponerlo al final-->
+                        <div *ngIf="Nombre?.errors && Nombre?.touched">
+                            <p *ngIf="Nombre?.hasError('required')" class="text-danger">El nombre es requerido!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="Apellido" class="col-sm-2 col-form-label">Apellido:</label>
+                    <label for="apellido" class="col-sm-2 col-form-label">Apellido:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="Apellido" formControlName="Apellido" class="form-control" required>
+                        <input type="text" name="apellido" formControlName="apellido" class="form-control" [ngClass]="{'is-invalid': Apellido?.errors && Apellido?.touched, 'is-valid': !Apellido?.errors && Apellido?.touched}">
+                        <div *ngIf="Apellido?.errors && Apellido?.touched">
+                            <p *ngIf="Apellido?.hasError('required')" class="text-danger">El apellido es requerido!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="profesion" class="col-sm-2 col-form-label">Profesión:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="profesion" formControlName="profesion" class="form-control" required>
+                        <input type="text" name="profesion" formControlName="profesion" class="form-control" [ngClass]="{'is-invalid': Profesion?.errors && Profesion?.touched, 'is-valid': !Profesion?.errors && Profesion?.touched}">
+                        <div *ngIf="Profesion?.errors && Profesion?.touched">
+                            <p *ngIf="Profesion?.hasError('required')" class="text-danger">La profesion es requerida!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="ubicacion" class="col-sm-2 col-form-label">Lugar de residencia:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="ubicacion" formControlName="ubicacion" class="form-control" required>
+                        <input type="text" name="ubicacion" formControlName="ubicacion" class="form-control" [ngClass]="{'is-invalid': Ubicacion?.errors && Ubicacion?.touched, 'is-valid': !Ubicacion?.errors && Ubicacion?.touched}">
+                        <div *ngIf="Ubicacion?.errors && Ubicacion?.touched">
+                            <p *ngIf="Ubicacion?.hasError('required')" class="text-danger">El lugar de residencia es requerido!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="col-sm-2 col-form-label">Email:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="email" formControlName="email" class="form-control" required>
+                        <input type="text" name="email" formControlName="email" class="form-control" [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
+                        <div *ngIf="Email?.errors && Email?.touched">
+                            <p *ngIf="Email?.hasError('required')" class="text-danger">El email es requerido!</p>
+                            <p *ngIf="Email?.hasError('email')" class="text-danger">¡El formato de email no es válido!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="tel" class="col-sm-2 col-form-label">Teléfono:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="tel" formControlName="tel" class="form-control" required>
+                        <input type="text" name="tel" formControlName="tel" class="form-control" [ngClass]="{'is-invalid': Tel?.errors && Tel?.touched, 'is-valid': !Tel?.errors && Tel?.touched}">
+                        <div *ngIf="Tel?.errors && Tel?.touched">
+                            <p *ngIf="Tel?.hasError('required')" class="text-danger">El teléfono es requerido!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="acercaDe" class="col-sm-2 col-form-label">Acerca de mi:</label>>
                     <div class="col-sm-10">
-                        <input type="text" name="acercaDe" formControlName="acercaDe" class="form-control" required>
+                        <input type="text" name="acercaDe" formControlName="acercaDe" class="form-control" [ngClass]="{'is-invalid': AcercaDe?.errors && AcercaDe?.touched, 'is-valid': !AcercaDe?.errors && AcercaDe?.touched}">
+                        <div *ngIf="AcercaDe?.errors && AcercaDe?.touched">
+                            <p *ngIf="AcercaDe?.hasError('required')" class="text-danger">El acerca de es requerido!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="img" class="col-sm-2 col-form-label">Foto:</label>>
                     <div class="col-sm-10">
-                        <input type="text" name="img" formControlName="img" class="form-control" required>
+                        <input type="text" name="img" formControlName="img" class="form-control" [ngClass]="{'is-invalid': Img?.errors && Img?.touched, 'is-valid': !Img?.errors && Img?.touched}">
+                        <div *ngIf="Img?.errors && Img?.touched">
+                            <p *ngIf="Img?.hasError('required')" class="text-danger">La imágen es requerida!</p>
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar</button>
+          <button [disabled]="datosPersonalesForm.invalid" type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>

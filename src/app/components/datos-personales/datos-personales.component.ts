@@ -26,7 +26,7 @@ export class DatosPersonalesComponent implements OnInit {
        Apellido: ['', [Validators.required]],
        profesion: ['', [Validators.required]],
        ubicacion: ['', [Validators.required]],
-       email: ['', [Validators.required]],
+       email: ['', [Validators.required, Validators.email]],
        tel: ['', [Validators.required]],
        acercaDe: ['', [Validators.required]],
        img: ['', [Validators.required]]
@@ -63,6 +63,40 @@ export class DatosPersonalesComponent implements OnInit {
       );
     }
   } 
+
+  get Nombre() {
+    return this.datosPersonalesForm.get('nombre');
+  }
+
+  get Apellido() {
+    return this.datosPersonalesForm.get('apellido');
+  }
+
+  get Profesion() {
+    return this.datosPersonalesForm.get('profesion');
+  }
+
+  get Ubicacion() {
+    return this.datosPersonalesForm.get('ubicacion');
+  }
+
+  get Email() {
+    return this.datosPersonalesForm.get('email');
+  }
+
+  get Tel() {
+    return this.datosPersonalesForm.get('tel');
+  }
+
+  get AcercaDe() {
+    return this.datosPersonalesForm.get('acercaDe');
+  }
+
+  get Img() {
+    return this.datosPersonalesForm.get('img');
+  }
+
+
 
   onNewDatoPersonal() {
     this.clearForm();
