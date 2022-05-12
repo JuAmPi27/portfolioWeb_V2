@@ -15,31 +15,43 @@
             <div class="mb-3">
               <label for="titulo" class="col-sm-2 col-form-label">Título:</label>
               <div class="col-sm-10">
-                <input type="text" name="titulo" formControlName="titulo" class="form-control" required>
+                <input type="text" name="titulo" formControlName="titulo" class="form-control" [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
+                <div *ngIf="Titulo?.errors && Titulo?.touched">
+                  <p *ngIf="Titulo?.hasError('required')" class="text-danger">El Título es requerido!</p>
+                </div>
               </div>
             </div>
             <div class="mb-3">
               <label for="escuela" class="col-sm-2 col-form-label">Institución:</label>
               <div class="col-sm-10">
-                <input type="text" name="escuela" formControlName="escuela" class="form-control" required>
+                <input type="text" name="escuela" formControlName="escuela" class="form-control" [ngClass]="{'is-invalid': Escuela?.errors && Escuela?.touched, 'is-valid': !Escuela?.errors && Escuela?.touched}">
+                <div *ngIf="Escuela?.errors && Escuela?.touched">
+                  <p *ngIf="Escuela?.hasError('required')" class="text-danger">La Institución es requerida!</p>
+                </div>
               </div>
             </div>
             <div class="mb-3">
               <label for="comienzo" class="col-sm-2 col-form-label">Fecha comienzo:</label>
               <div class="col-sm-10">
-                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" required>
+                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" [ngClass]="{'is-invalid': Comienzo?.errors && Comienzo?.touched, 'is-valid': !Comienzo?.errors && Comienzo?.touched}">
+                <div *ngIf="Comienzo?.errors && Comienzo?.touched">
+                  <p *ngIf="Comienzo?.hasError('required')" class="text-danger">Fecha de comienzo requerida!</p>
+                </div>
               </div>
             </div>
             <div class="mb-3">
               <label for="fin" class="col-sm-2 col-form-label">Fecha fin:</label>
               <div class="col-sm-10">
-                <input type="text" name="fin" formControlName="fin" class="form-control" required>
+                <input type="text" name="fin" formControlName="fin" class="form-control" [ngClass]="{'is-invalid': Fin?.errors && Fin?.touched, 'is-valid': !Fin?.errors && Fin?.touched}">
+                <div *ngIf="Fin?.errors && Fin?.touched">
+                  <p *ngIf="Fin?.hasError('required')" class="text-danger">Fecha de fin requerida!</p>
+                </div>
               </div>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar</button>
+          <button [disabled]="educationForm.invalid" type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#educationForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>

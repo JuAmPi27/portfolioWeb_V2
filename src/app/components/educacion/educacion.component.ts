@@ -58,6 +58,24 @@ export class EducacionComponent implements OnInit {
     }
   } 
 
+
+  get Titulo() {
+    return this.educationForm.get('titulo');
+  }
+
+  get Escuela() {
+    return this.educationForm.get('escuela');
+  }
+
+  get Comienzo() {
+    return this.educationForm.get('comienzo');
+  }
+
+  get Fin() {
+    return this.educationForm.get('fin');
+  }
+
+
   onNewEducation() {
     this.clearForm();
   }

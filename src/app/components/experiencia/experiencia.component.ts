@@ -22,12 +22,12 @@ export class ExperienciaComponent implements OnInit {
       
       this.experienciaForm = this.formBuilder.group({
         id: [''],
-        empresa: ['', [Validators.required]],
-        cargo: ['', [Validators.required]],
-        pais: ['', [Validators.required]],
+        empresa: ['', [Validators.required, Validators.minLength(4)]],
+        cargo: ['', [Validators.required, Validators.minLength(4)]],
+        pais: ['', [Validators.required, Validators.minLength(4)]],
         comienzo: ['', [Validators.required]] ,
         fin: ['', [Validators.required]],
-        tareas: ['', [Validators.required]]
+        tareas: ['', [Validators.required, Validators.minLength(4)]]
        });
     }
 
@@ -40,7 +40,6 @@ export class ExperienciaComponent implements OnInit {
     this.datosPortfolio.obtenerDatosExperiencia().subscribe( 
       (data) => {
       this.experienciaList = data;
-      console.log(data); //para verificar por consola que nos llega bien la data solicitada
     });
   }
 
@@ -60,6 +59,32 @@ export class ExperienciaComponent implements OnInit {
       );
     }
   } 
+
+
+  get Empresa() {
+    return this.experienciaForm.get('empresa');
+  }
+
+  get Cargo() {
+    return this.experienciaForm.get('cargo');
+  }
+
+  get Pais() {
+    return this.experienciaForm.get('pais');
+  }
+
+  get Comienzo() {
+    return this.experienciaForm.get('comienzo');
+  }
+
+  get Fin() {
+    return this.experienciaForm.get('fin');
+  }
+
+  get Tareas() {
+    return this.experienciaForm.get('tareas');
+  }
+
 
   onNewExperience() {
     this.clearForm();

@@ -22,8 +22,8 @@ export class HardSkillComponent implements OnInit {
 
       this.hardSkillForm = this.formBuilder.group({
        id: [''],
-       nombre: ['', [Validators.required]],
-       progreso: ['', [Validators.required]],
+       nombre: ['', [Validators.required, Validators.minLength(3)]],
+       progreso: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
       });
     }
   
@@ -57,6 +57,16 @@ export class HardSkillComponent implements OnInit {
       );
     }
   } 
+
+
+  get Nombre() {
+    return this.hardSkillForm.get('nombre');
+  }
+
+  get Progreso() {
+    return this.hardSkillForm.get('progreso');
+  }
+
 
   onNewHardSkill() {
     this.clearForm();

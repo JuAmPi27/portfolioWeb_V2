@@ -60,6 +60,24 @@ export class ProyectosComponent implements OnInit {
       }
     } 
 
+
+    get Nombre() {
+      return this.proyectoForm.get('nombre');
+    }
+  
+    get Descripcion() {
+      return this.proyectoForm.get('descripcion');
+    }
+  
+    get FechaRealizacion() {
+      return this.proyectoForm.get('fechaRealizacion');
+    }
+
+    get Github() {
+      return this.proyectoForm.get('github');
+    }
+
+
     onNewProyect() {
       this.clearForm();
     }

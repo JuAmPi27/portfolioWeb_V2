@@ -22,8 +22,8 @@ export class SoftSkillComponent implements OnInit {
 
       this.softSkillForm = this.formBuilder.group({
        id: [''],
-       nombre: ['', [Validators.required]],
-       progreso: ['', [Validators.required]],
+       nombre: ['', [Validators.required, Validators.minLength(3)]],
+       progreso: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
       });
     }
   
@@ -57,6 +57,15 @@ export class SoftSkillComponent implements OnInit {
     }
   } 
 
+  get Nombre() {
+    return this.softSkillForm.get('nombre');
+  }
+
+  get Progreso() {
+    return this.softSkillForm.get('progreso');
+  }
+
+  
   onNewSoftSkill() {
     this.clearForm();
   }

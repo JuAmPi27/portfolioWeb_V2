@@ -15,43 +15,61 @@
             <div class="mb-3 text-start">
               <label for="empresa" class="col-sm-2 col-form-label">Empresa:</label>
               <div class="col-sm-10">
-                <input type="text" name="empresa" formControlName="empresa" class="form-control" required>
+                <input type="text" name="empresa" formControlName="empresa" class="form-control" [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}">
+                <div *ngIf="Empresa?.errors && Empresa?.touched">
+                  <p *ngIf="Empresa?.hasError('required')" class="text-danger">La empresa es requerida!</p>
+                </div>
               </div>
             </div>
             <div class="mb-3 text-start">
                 <label for="cargo" class="col-sm-2 col-form-label">Cargo:</label>
                 <div class="col-sm-10">
-                  <input type="text" name="cargo" formControlName="cargo" class="form-control" required>
+                  <input type="text" name="cargo" formControlName="cargo" class="form-control" [ngClass]="{'is-invalid': Cargo?.errors && Cargo?.touched, 'is-valid': !Cargo?.errors && Cargo?.touched}">
+                  <div *ngIf="Cargo?.errors && Cargo?.touched">
+                    <p *ngIf="Cargo?.hasError('required')" class="text-danger">El cargo es requerido!</p>
+                  </div>
                 </div>
             </div>
             <div class="mb-3 text-start">
               <label for="pais" class="col-sm-2 col-form-label">País:</label>
               <div class="col-sm-10">
-                <input type="text" name="pais" formControlName="pais" class="form-control" required>
+                <input type="text" name="pais" formControlName="pais" class="form-control" [ngClass]="{'is-invalid': Pais?.errors && Pais?.touched, 'is-valid': !Pais?.errors && Pais?.touched}">
+                <div *ngIf="Pais?.errors && Pais?.touched">
+                  <p *ngIf="Pais?.hasError('required')" class="text-danger">El país es requerido!</p>
+                </div>
               </div>
             </div>
             <div class="mb-3 text-start">
               <label for="comienzo" class="col-sm-2 col-form-label">Fecha comienzo:</label>
               <div class="col-sm-10">
-                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" required>
+                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" [ngClass]="{'is-invalid': Comienzo?.errors && Comienzo?.touched, 'is-valid': !Comienzo?.errors && Comienzo?.touched}">
+                <div *ngIf="Comienzo?.errors && Comienzo?.touched">
+                  <p *ngIf="Comienzo?.hasError('required')" class="text-danger">Fecha de comienzo requerida!</p>
+                </div>
               </div>
             </div>
             <div class="mb-3 text-start">
               <label for="fin" class="col-sm-2 col-form-label">Fecha fin:</label>
               <div class="col-sm-10">
-                <input type="text" name="fin" formControlName="fin" class="form-control" required>
+                <input type="text" name="fin" formControlName="fin" class="form-control" [ngClass]="{'is-invalid': Fin?.errors && Fin?.touched, 'is-valid': !Fin?.errors && Fin?.touched}">
+                <div *ngIf="Fin?.errors && Fin?.touched">
+                  <p *ngIf="Fin?.hasError('required')" class="text-danger">Fecha de fin requerida!</p>
+                </div>
               </div>
             </div>
             <div class="mb-3 text-start">
                 <label for="tareas" class="col-sm-2 col-form-label">Tareas realizadas:</label>
                 <div class="col-sm-10">
-                  <input type="text" name="tareas" formControlName="tareas" class="form-control" required>
+                  <input type="text" name="tareas" formControlName="tareas" class="form-control" [ngClass]="{'is-invalid': Tareas?.errors && Tareas?.touched, 'is-valid': !Tareas?.errors && Tareas?.touched}">
+                  <div *ngIf="Tareas?.errors && Tareas?.touched">
+                  <p *ngIf="Tareas?.hasError('required')" class="text-danger">Las tareas son requeridas!</p>
+                </div>
                 </div>
               </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#experienciaForm">Agregar</button>
+          <button [disabled]="experienciaForm.invalid" type="submit" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#experienciaForm">Agregar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
