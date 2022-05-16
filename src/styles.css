@@ -14,6 +14,11 @@ body {
     text-decoration: underline;
 }
 
+.btn_modal {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
 /* ============= NAV-BAR =============== */
 .barra-superior {
     background-color: #FFE400;

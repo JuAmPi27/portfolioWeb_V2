@@ -62,12 +62,12 @@
                     <div class="col-sm-10">
                         <input type="text" name="tel" formControlName="tel" class="form-control" [ngClass]="{'is-invalid': Tel?.errors && Tel?.touched, 'is-valid': !Tel?.errors && Tel?.touched}">
                         <div *ngIf="Tel?.errors && Tel?.touched">
-                            <p *ngIf="Tel?.hasError('required')" class="text-danger">El teléfono es requerido!</p>
+                            <p *ngIf="Tel?.hasError('required')" class="text-danger"> El teléfono es requerido!</p>
                         </div>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="acercaDe" class="col-sm-2 col-form-label">Acerca de mi:</label>>
+                    <label for="acercaDe" class="col-sm-2 col-form-label">Acerca de mi:</label>
                     <div class="col-sm-10">
                         <input type="text" name="acercaDe" formControlName="acercaDe" class="form-control" [ngClass]="{'is-invalid': AcercaDe?.errors && AcercaDe?.touched, 'is-valid': !AcercaDe?.errors && AcercaDe?.touched}">
                         <div *ngIf="AcercaDe?.errors && AcercaDe?.touched">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="img" class="col-sm-2 col-form-label">Foto:</label>>
+                    <label for="img" class="col-sm-2 col-form-label">Foto:</label>
                     <div class="col-sm-10">
                         <input type="text" name="img" formControlName="img" class="form-control" [ngClass]="{'is-invalid': Img?.errors && Img?.touched, 'is-valid': !Img?.errors && Img?.touched}">
                         <div *ngIf="Img?.errors && Img?.touched">
@@ -97,7 +97,7 @@
 
     <div *ngFor="let datoPersonal of datosPersonalesList; let i = index" class="tarjeta-datos px-4 py-4 my-4">
         <div *ngIf="isUserLogged" class="data-control">
-            <button class="btn btn-sm btn-dark text-warning me-2" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onNewDatoPersonal()">Agregar datos personales</button> 
+            <button class="btn_modal btn btn-sm btn-dark text-warning my-3" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onNewDatoPersonal()">Agregar datos personales</button> 
         </div>
         <img class="foto-carnet rounded-circle mx-auto ms-5 mb-4" src="/assets/images/{{ datoPersonal.img }}">
         <div class="lista-datos col-md-11 pe-4 px-2 mt-5 text-end">
@@ -107,20 +107,20 @@
                 <button class="btn" (click)="onDeleteDatoPersonal(i)"><i class="fa-solid fa-trash-can text-success ms-2 fs-6"></i></button>
             </div>
             <h4 class="nombre mt-2 fs-2">
-                <i class="fa-solid fa-user text-warning fs-4"></i> {{ datoPersonal.apellido }} {{ datoPersonal.nombre }}
+                <i class="fa-solid fa-user text-primary fs-4"></i> {{ datoPersonal.apellido }} {{ datoPersonal.nombre }}
             </h4>
             <h5 class="titulo mt-3 fs-3">
-                <i class="fa-solid fa-laptop-code text-warning fs-4"></i>
+                <i class="fa-solid fa-laptop-code text-primary fs-4"></i>
                 <strong>{{ datoPersonal.profesion }}</strong>
             </h5>
             <h6 class="email mt-3 fs-5">
-                <i class="fa-regular fa-envelope text-warning fs-4 me-2"></i> {{ datoPersonal.email }}
+                <i class="fa-regular fa-envelope text-primary fs-4 me-2"></i> {{ datoPersonal.email }}
             </h6>
-            <h6 class="tel mt-4 me-5 fs-5"><i class="fas fa-mobile-alt text-warning fs-5 me-1"></i>
+            <h6 class="tel mt-4 me-5 fs-5"><i class="fas fa-mobile-alt text-primary fs-5 me-1"></i>
                 {{ datoPersonal.tel }}
             </h6>
             <p class="lugar mt-3 fs-5">
-                <i class="fa-solid fa-location-dot text-warning fs-4"></i>{{ datoPersonal.ubicacion }}
+                <i class="fa-solid fa-location-dot text-primary ms-1 fs-4"></i>{{ datoPersonal.ubicacion }}
             </p>
             <br>
         </div>

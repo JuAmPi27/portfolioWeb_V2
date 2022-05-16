@@ -41,7 +41,7 @@
 <div class="contenedor-skills">
      <!-- ======SOFT SKILLS =======-->
         <div *ngIf="isUserLogged" class="data-control soft-s">
-            <button class="btn btn-sm btn-warning text-dark text-end" data-bs-toggle="modal" data-bs-target="#softSkillForm" (click)="onNewSoftSkill()">Agregar soft-skill</button>
+            <button class="btn_modal btn btn-sm btn-warning text-dark text-end" data-bs-toggle="modal" data-bs-target="#softSkillForm" (click)="onNewSoftSkill()">Agregar soft-skill</button>
             <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-2 ms-3 text-center">Soft-Skills</h5>
             <div class="mt-4" *ngFor="let softSkill of softSkillList; let i = index">
                 <h6> {{ softSkill.nombre }} </h6>
