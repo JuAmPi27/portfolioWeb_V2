@@ -39,7 +39,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onNewCourse()">Agregar</button>
+          <button type="submit" class="btn btn-warning text-dark">Guardar</button>
           <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
@@ -48,7 +48,7 @@
 
     <h4 class="text-light ms-3 text-center">CURSOS REALIZADOS:</h4>
     <div *ngIf="isUserLogged" class="data-control"> 
-        <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#cursoForm">Agregar curso</button> 
+        <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onNewCourse()">Agregar curso</button> 
     </div>
     <div class="row text-light row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-1 justify-content-center">
         <div class="col curso d-flex align-items-center ms-5" *ngFor="let curso of cursosList; let i = index">
