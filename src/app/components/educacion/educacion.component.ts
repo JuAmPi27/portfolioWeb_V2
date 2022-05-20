@@ -34,13 +34,6 @@ export class EducacionComponent implements OnInit {
     this.reloaData();
   }
 
-  private reloaData() {
-    this.datosPortfolio.obtenerDatosEducacion().subscribe( 
-      (data) => {
-      this.educacionList = data;
-    });
-  }
-
   onSubmit() {
     if (this.educationForm.get('id')?.value == '') {
       this.datosPortfolio.guardarNuevaEducacion(this.educationForm.value).subscribe(
@@ -86,14 +79,21 @@ export class EducacionComponent implements OnInit {
   }
 
   onDeleteEducation(index: number) {
+    let educacion : Educacion = this.educacionList[index];
     if (confirm("¿Esta seguro que desea borrar esta educación?")) {
-      let educacion : Educacion = this.educacionList[index];
       this.datosPortfolio.borrarEducacion(educacion.id).subscribe(
         () => {
           this.reloaData();
         }
       );
     }
+  }
+
+  private reloaData() {
+    this.datosPortfolio.obtenerDatosEducacion().subscribe( 
+      (data) => {
+      this.educacionList = data;
+    });
   }
 
   private clearForm() {

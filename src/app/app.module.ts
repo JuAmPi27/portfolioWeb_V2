@@ -12,11 +12,11 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CursosComponent } from './components/cursos/cursos.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { CertificadosComponent } from './components/certificados/certificados.component';
 import { HardSkillComponent } from './components/hard-skill/hard-skill.component';
 import { SoftSkillComponent } from './components/soft-skill/soft-skill.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [

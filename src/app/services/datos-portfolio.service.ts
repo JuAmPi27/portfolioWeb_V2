@@ -27,15 +27,15 @@ export class DatosPortfolioService {
    }
  
    guardarNuevoDatosPersonales (datosPersonales: DatosPersonales): Observable<DatosPersonales> {
-     return this.http.post<any> (config.baseUrl + "datosPersonales/crear", datosPersonales);
+     return this.http.post<any>(config.baseUrl + "datosPersonales/crear", datosPersonales);
    }
  
    modificarDatosPersonales (datosPersonales: DatosPersonales): Observable<any> {
-     return this.http.put<any> (config.baseUrl + "datosPersonales/update", datosPersonales);
+     return this.http.put<any>(config.baseUrl + "datosPersonales/update", datosPersonales);
    }
  
    borrarDatosPersonales(id: number): Observable<any> {
-     return this.http.delete<any> (config.baseUrl + "datosPersonales/" + id);
+     return this.http.delete<any>(config.baseUrl + "datosPersonales/" + id);
    }
 
 
@@ -45,15 +45,15 @@ export class DatosPortfolioService {
    }
  
    guardarNuevoProyecto (proyecto: Proyecto): Observable<Proyecto> {
-     return this.http.post<any> (config.baseUrl + "proyecto/crear", proyecto);
+     return this.http.post<any>(config.baseUrl + "proyecto/crear", proyecto);
    }
  
    modificarProyecto (proyecto: Proyecto): Observable<any> {
-     return this.http.put<any> (config.baseUrl + "proyecto/update", proyecto);
+     return this.http.put<any>(config.baseUrl + "proyecto/update", proyecto);
    }
  
    borrarProyecto(id: number): Observable<any> {
-     return this.http.delete<any> (config.baseUrl + "proyecto/" + id);
+     return this.http.delete<any>(config.baseUrl + "proyecto/" + id);
    }
 
 
@@ -63,15 +63,15 @@ export class DatosPortfolioService {
    }
  
    guardarNuevaHardSkill (hard: HardSkill): Observable<HardSkill> {
-     return this.http.post<any> (config.baseUrl + "hardSkill/crear", hard);
+     return this.http.post<any>(config.baseUrl + "hardSkill/crear", hard);
    }
  
    modificarHardSkill (hard: HardSkill): Observable<any> {
-     return this.http.put<any> (config.baseUrl + "hardSkill/update", hard);
+     return this.http.put<any>(config.baseUrl + "hardSkill/update", hard);
    }
  
    borrarHardSkill(id: number): Observable<any> {
-     return this.http.delete<any> (config.baseUrl + "hardSkill/" + id);
+     return this.http.delete<any>(config.baseUrl + "hardSkill/" + id);
    }
 
 
@@ -81,15 +81,15 @@ export class DatosPortfolioService {
    }
  
    guardarNuevaSoftSkill (soft: SoftSkill): Observable<SoftSkill> {
-     return this.http.post<any> (config.baseUrl + "softSkill/crear", soft);
+     return this.http.post<any>(config.baseUrl + "softSkill/crear", soft);
    }
  
    modificarSoftSkill (soft: SoftSkill): Observable<any> {
-     return this.http.put<any> (config.baseUrl + "softSkill/update", soft);
+     return this.http.put<any>(config.baseUrl + "softSkill/update", soft);
    }
  
    borrarSoftSkill(id: number): Observable<any> {
-     return this.http.delete<any> (config.baseUrl + "softSkill/" + id);
+     return this.http.delete<any>(config.baseUrl + "softSkill/" + id);
    }
 
 
@@ -99,15 +99,15 @@ export class DatosPortfolioService {
    }
  
    guardarNuevaExperiencia (experiencia: Experiencia): Observable<Experiencia> {
-     return this.http.post<any> (config.baseUrl + "experiencia/crear", experiencia);
+     return this.http.post<any>(config.baseUrl + "experiencia/crear", experiencia);
    }
  
    modificarExperiencia (experiencia: Experiencia): Observable<any> {
-     return this.http.put<any> (config.baseUrl + "experiencia/update", experiencia);
+     return this.http.put<any>(config.baseUrl + "experiencia/update", experiencia);
    }
  
    borrarExperiencia(id: number): Observable<any> {
-     return this.http.delete<any> (config.baseUrl + "experiencia/" + id);
+     return this.http.delete<any>(config.baseUrl + "experiencia/" + id);
    }
 
 
@@ -117,15 +117,15 @@ export class DatosPortfolioService {
   }
 
   guardarNuevaEducacion (educacion: Educacion): Observable<Educacion> {
-    return this.http.post<any> (config.baseUrl + "educacion/crear", educacion);
+    return this.http.post<any>(config.baseUrl + "educacion/crear", educacion);
   }
 
   modificarEducacion (educacion: Educacion): Observable<any> {
-    return this.http.put<any> (config.baseUrl + "educacion/update", educacion );
+    return this.http.put<any>(config.baseUrl + "educacion/update", educacion );
   }
 
   borrarEducacion(id: number): Observable<any> {
-    return this.http.delete<any> (config.baseUrl + "educacion/" + id);
+    return this.http.delete<any>(config.baseUrl + "educacion/" + id);
   }
 
   
@@ -135,15 +135,15 @@ export class DatosPortfolioService {
    }
  
    guardarNuevoCurso (curso: Curso): Observable<Curso> {
-     return this.http.post<any> (config.baseUrl + "curso/crear", curso);
+     return this.http.post<any>(config.baseUrl + "curso/crear", curso);
    }
  
    modificarCurso (curso: Curso): Observable<any> {
-     return this.http.put<any> (config.baseUrl + "curso/update", curso);
+     return this.http.put<any>(config.baseUrl + "curso/update", curso);
    }
  
    borrarCurso(id: number): Observable<any> {
-     return this.http.delete<any> (config.baseUrl + "curso/" + id);
+     return this.http.delete<any>(config.baseUrl + "curso/" + id);
    }
 
 

@@ -1,7 +1,6 @@
 
 export interface SoftSkill {
-   
-    id: number;
-    nombre: String;
+    id: number,
+    nombre: String,
     progreso: String
 }

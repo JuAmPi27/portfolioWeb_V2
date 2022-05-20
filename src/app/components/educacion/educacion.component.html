@@ -15,7 +15,7 @@
             <div class="mb-3">
               <label for="titulo" class="col-sm-2 col-form-label">Título:</label>
               <div class="col-sm-10">
-                <input type="text" name="titulo" formControlName="titulo" class="form-control" [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
+                <input type="text" name="titulo" formControlName="titulo" class="form-control" required [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
                 <div *ngIf="Titulo?.errors && Titulo?.touched">
                   <p *ngIf="Titulo?.hasError('required')" class="text-danger">El Título es requerido!</p>
                 </div>
@@ -24,7 +24,7 @@
             <div class="mb-3">
               <label for="escuela" class="col-sm-2 col-form-label">Institución:</label>
               <div class="col-sm-10">
-                <input type="text" name="escuela" formControlName="escuela" class="form-control" [ngClass]="{'is-invalid': Escuela?.errors && Escuela?.touched, 'is-valid': !Escuela?.errors && Escuela?.touched}">
+                <input type="text" name="escuela" formControlName="escuela" class="form-control" required [ngClass]="{'is-invalid': Escuela?.errors && Escuela?.touched, 'is-valid': !Escuela?.errors && Escuela?.touched}">
                 <div *ngIf="Escuela?.errors && Escuela?.touched">
                   <p *ngIf="Escuela?.hasError('required')" class="text-danger">La Institución es requerida!</p>
                 </div>
@@ -33,7 +33,7 @@
             <div class="mb-3">
               <label for="comienzo" class="col-sm-2 col-form-label">Fecha comienzo:</label>
               <div class="col-sm-10">
-                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" [ngClass]="{'is-invalid': Comienzo?.errors && Comienzo?.touched, 'is-valid': !Comienzo?.errors && Comienzo?.touched}">
+                <input type="text" name="comienzo" formControlName="comienzo" class="form-control" required [ngClass]="{'is-invalid': Comienzo?.errors && Comienzo?.touched, 'is-valid': !Comienzo?.errors && Comienzo?.touched}">
                 <div *ngIf="Comienzo?.errors && Comienzo?.touched">
                   <p *ngIf="Comienzo?.hasError('required')" class="text-danger">Fecha de comienzo requerida!</p>
                 </div>
@@ -42,7 +42,7 @@
             <div class="mb-3">
               <label for="fin" class="col-sm-2 col-form-label">Fecha fin:</label>
               <div class="col-sm-10">
-                <input type="text" name="fin" formControlName="fin" class="form-control" [ngClass]="{'is-invalid': Fin?.errors && Fin?.touched, 'is-valid': !Fin?.errors && Fin?.touched}">
+                <input type="text" name="fin" formControlName="fin" class="form-control" required [ngClass]="{'is-invalid': Fin?.errors && Fin?.touched, 'is-valid': !Fin?.errors && Fin?.touched}">
                 <div *ngIf="Fin?.errors && Fin?.touched">
                   <p *ngIf="Fin?.hasError('required')" class="text-danger">Fecha de fin requerida!</p>
                 </div>
@@ -64,11 +64,11 @@
     </div>
    
     <!-- ====Educacion=== -->
-    <div class="row align-items-md-stretch my-3 pb-3 border-bottom justify-content-center">
+    <div class="row align-items-md-stretch my-3 pb-5 border-bottom justify-content-center">
         <div class="col-md-4" *ngFor="let educacion of educacionList; let i = index">
           <div *ngIf="isUserLogged" class="data-control text-end"> 
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i);"><i class="fas fa-edit bg-warning text-dark"></i></button>
-            <button class="btn" (click)="onDeleteEducation(i);"><i class="fa-solid fa-trash-can bg-warning text-dark"></i></button>
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)"><i class="fas fa-edit bg-warning text-dark"></i></button>
+              <button class="btn" (click)="onDeleteEducation(i)"><i class="fa-solid fa-trash-can bg-warning text-dark"></i></button>
           </div>
           <div class="h-100 p-4 text-center text-dark bg-warning rounded-2">
             <h5 id="edu-escuela"><i class="fa-solid fa-graduation-cap text-dark"></i> {{ educacion.escuela }}</h5>
