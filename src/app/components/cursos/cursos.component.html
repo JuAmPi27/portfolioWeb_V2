@@ -55,15 +55,13 @@
             <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
             <div class="border-bottom">
                 <div *ngIf="!isUserLogged" class="data-control btn-edit btn-cruz text-end">
-                    <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onEditCourse(i)"><i class="fas fa-edit bg-warning text-dark"></i></button>
+                    <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onEditCourse(i)"><i class="fas fa-edit text-warning"></i></button>
                     <button class="btn btn-right" (click)="onDeleteCourse(i)"><i class="fa-solid fa-trash-can text-warning"></i></button>
                 </div>
                 <h6 class="nombre_curso fw-bold mb-0 text-center"><i class="fa-solid fa-file-code text-success fs-4 mx-2"></i>
                     {{ curso.nombre }}
                 </h6>
-                <p><em class="text-center ms-1 fs-6">{{ curso.lugar }}</em>
-                    <button [routerLink]="['/certificados']" class="ms-3 text-success" target="_blank">Ver certificado</button>
-                </p>
+                <p><em class="text-center ms-1 fs-6">{{ curso.lugar }}</em></p>
             </div>
         </div>
     </div>

@@ -23,9 +23,8 @@ export class CursosComponent implements OnInit {
       this.cursoForm = this.formBuilder.group({
        id: [''],
        nombre: ['', [Validators.required]],
-       Lugar: ['', [Validators.required]],
-       duracion: ['', [Validators.required]] ,
-       href: ['', [Validators.required]] 
+       lugar: ['', [Validators.required]],
+       duracion: ['', [Validators.required]] 
       });
     }
 
@@ -38,7 +37,6 @@ export class CursosComponent implements OnInit {
     this.datosPortfolio.obtenerDatosCursos().subscribe( 
       (data) => {
       this.cursosList = data;
-      console.log(data); //para verificar por consola que nos llega bien la data solicitada
     });
   }
 
@@ -85,7 +83,6 @@ export class CursosComponent implements OnInit {
       nombre: '',
       lugar: '', 
       duracion: '',
-      href: ''
     });
   }
 
@@ -95,7 +92,6 @@ export class CursosComponent implements OnInit {
       nombre: curso.nombre,
       lugar: curso.lugar,
       duracion: curso.duracion,
-      href: curso.href,
     })
   }
 

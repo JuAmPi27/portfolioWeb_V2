@@ -45,10 +45,9 @@
               <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-2 ms-3 text-center"> Hard-Skills</h5>
                 <div class="mt-4" *ngFor="let hardSkill of hardSkillList; let i = index">
                   <h6> {{ hardSkill.nombre }} </h6>
-                  <!--PROBAR SI SALEN BIEN LOS BOTONES DE EDITAR Y BORRAR EN CADA SKILL-->
                 <div *ngIf="isUserLogged" class="data-control text-end"> 
-                  <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditHardSkill(i);"><i class="fas fa-edit bg-warning text-dark"></i></button>
-                  <button class="btn" (click)="onDeleteHardSkill(i);"><i class="fa-solid fa-trash-can bg-warning text-dark"></i></button>
+                  <button class="btn" data-bs-toggle="modal" data-bs-target="#hardSkillForm" (click)="onEditHardSkill(i);"><i class="fas fa-edit text-primary"></i></button>
+                  <button class="btn" (click)="onDeleteHardSkill(i);"><i class="fa-solid fa-trash-can text-primary"></i></button>
                 </div>
                     <div class="progress">
                       <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">

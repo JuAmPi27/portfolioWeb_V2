@@ -67,8 +67,8 @@
     <div class="row align-items-md-stretch my-3 pb-5 border-bottom justify-content-center">
         <div class="col-md-4" *ngFor="let educacion of educacionList; let i = index">
           <div *ngIf="isUserLogged" class="data-control text-end"> 
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)"><i class="fas fa-edit bg-warning text-dark"></i></button>
-              <button class="btn" (click)="onDeleteEducation(i)"><i class="fa-solid fa-trash-can bg-warning text-dark"></i></button>
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)"><i class="fas fa-edit text-warning"></i></button>
+              <button class="btn" (click)="onDeleteEducation(i)"><i class="fa-solid fa-trash-can text-warning"></i></button>
           </div>
           <div class="h-100 p-4 text-center text-dark bg-warning rounded-2">
             <h5 id="edu-escuela"><i class="fa-solid fa-graduation-cap text-dark"></i> {{ educacion.escuela }}</h5>

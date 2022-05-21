@@ -13,7 +13,6 @@ import { DatosPersonalesComponent } from './components/datos-personales/datos-pe
 import { HttpClientModule } from '@angular/common/http';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { LoginComponent } from './components/login/login.component';
-import { CertificadosComponent } from './components/certificados/certificados.component';
 import { HardSkillComponent } from './components/hard-skill/hard-skill.component';
 import { SoftSkillComponent } from './components/soft-skill/soft-skill.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -30,7 +29,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     DatosPersonalesComponent,
     LoginComponent,
     CursosComponent,
-    CertificadosComponent,
     HardSkillComponent,
     SoftSkillComponent,
   ],
