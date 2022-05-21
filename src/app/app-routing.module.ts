@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CertificadosComponent } from './components/certificados/certificados.component';
 import { DatosPersonalesComponent } from './components/datos-personales/datos-personales.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
@@ -17,7 +16,6 @@ const routes: Routes = [
   { path: 'habilidades', component: SkillsComponent },
   { path: 'proyectos', component: ProyectosComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'certificados', component: CertificadosComponent },
   { path: '', redirectTo: '/inicio', pathMatch: 'full'},
   { path: '**', redirectTo: '/inicio'}
 ];

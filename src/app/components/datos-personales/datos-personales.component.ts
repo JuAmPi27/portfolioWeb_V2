@@ -23,7 +23,7 @@ export class DatosPersonalesComponent implements OnInit {
       this.datosPersonalesForm = this.formBuilder.group({
        id: [''],
        nombre: ['', [Validators.required, Validators.minLength(4)]],
-       Apellido: ['', [Validators.required, Validators.minLength(3)]],
+       apellido: ['', [Validators.required, Validators.minLength(3)]],
        profesion: ['', [Validators.required, Validators.minLength(4)]],
        ubicacion: ['', [Validators.required, Validators.minLength(4)]],
        email: ['', [Validators.required, Validators.email]],

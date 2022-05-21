@@ -24,7 +24,8 @@ export class CursosComponent implements OnInit {
        id: [''],
        nombre: ['', [Validators.required]],
        lugar: ['', [Validators.required]],
-       duracion: ['', [Validators.required]] 
+       duracion: ['', [Validators.required]],
+       href: ['', [Validators.required]] 
       });
     }
 
@@ -83,6 +84,7 @@ export class CursosComponent implements OnInit {
       nombre: '',
       lugar: '', 
       duracion: '',
+      href: ''
     });
   }
 
@@ -92,6 +94,7 @@ export class CursosComponent implements OnInit {
       nombre: curso.nombre,
       lugar: curso.lugar,
       duracion: curso.duracion,
+      href: curso.href
     })
   }
 

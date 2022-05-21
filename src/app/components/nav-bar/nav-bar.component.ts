@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavBarComponent implements OnInit {
   gitHubUrl = "https://github.com/JuAmPi27?tab=repositories";
-  linkedinUrl = ""; // agregar URL de linkedin
+  linkedInUrl = "https://www.linkedin.com/in/juan-pablo-barnetche/";
   isUserLogged: Boolean = false;
 
   constructor(private authService: AuthService) { }

@@ -4,4 +4,5 @@ export interface Curso {
     nombre: String,
     lugar: String,
     duracion: String,
+    href: String
 }

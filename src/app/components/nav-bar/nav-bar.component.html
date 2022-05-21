@@ -44,8 +44,8 @@
                 </a>
             </li>
         </ul>
-        <div class="text-end"> <!--agregar URL linkedin-->
-            <a href="#" target="_blank"><i class="fab fa-linkedin text-dark fs-4 ms-3"></i></a>
+        <div class="text-end">
+            <a [href]="linkedInUrl" target="_blank"><i class="fab fa-linkedin text-dark fs-4 ms-3"></i></a>
             <a [href]="gitHubUrl" target="_blank"><i class="fa-brands fa-github-square text-dark fs-4 ms-3"></i></a>
             
                 <button *ngIf="!isUserLogged" type="button" [routerLink]="['/login']" class="btn btn-outline-dark ms-5 mt-2"><b class="btn-login">Login</b></button>

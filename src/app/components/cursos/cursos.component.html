@@ -46,6 +46,21 @@
     </div>
   </div>
 
+  <!--======MODAL IMAGEN CERTIFICADO (HREF)==============-->
+  <div id="cursoForm" class="modal fade" role="dialog">  
+    <div class="modal-dialog">
+        <div class="modal-content">      
+            <div class="modal-header">        
+                <button type="button" class="close" data-dismiss="modal">×</button>           
+            <div class="modal-body">
+              <img src="#" class="img-rounded" alt="cinque-terre" width="304" height="236" />   
+            </div>      
+            <div class="modal-footer">        
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>     
+            </div>  
+        </div>  
+    </div>
+
     <h4 class="text-light ms-3 text-center">CURSOS REALIZADOS:</h4>
     <div *ngIf="isUserLogged" class="data-control"> 
         <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onNewCourse()">Agregar curso</button> 
@@ -61,7 +76,9 @@
                 <h6 class="nombre_curso fw-bold mb-0 text-center"><i class="fa-solid fa-file-code text-success fs-4 mx-2"></i>
                     {{ curso.nombre }}
                 </h6>
-                <p><em class="text-center ms-1 fs-6">{{ curso.lugar }}</em></p>
+                <p><em class="text-center ms-1 fs-6">{{ curso.lugar }}</em>
+                  <button class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#cursoForm"><a class="text-success">Ver certificado</a></button>
+                </p>
             </div>
         </div>
     </div>
