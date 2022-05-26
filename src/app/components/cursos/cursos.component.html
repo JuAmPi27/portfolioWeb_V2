@@ -46,21 +46,6 @@
     </div>
   </div>
 
-  <!--======MODAL IMAGEN CERTIFICADO (HREF)==============-->
-  <div id="cursoForm" class="modal fade" role="dialog">  
-    <div class="modal-dialog">
-        <div class="modal-content">      
-            <div class="modal-header">        
-                <button type="button" class="close" data-dismiss="modal">×</button>           
-            <div class="modal-body">
-              <img src="#" class="img-rounded" alt="cinque-terre" width="304" height="236" />   
-            </div>      
-            <div class="modal-footer">        
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>     
-            </div>  
-        </div>  
-    </div>
-
     <h4 class="text-light ms-3 text-center">CURSOS REALIZADOS:</h4>
     <div *ngIf="isUserLogged" class="data-control"> 
         <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onNewCourse()">Agregar curso</button> 
@@ -69,7 +54,7 @@
         <div class="col curso d-flex align-items-center ms-5" *ngFor="let curso of cursosList; let i = index">
             <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
             <div class="border-bottom">
-                <div *ngIf="!isUserLogged" class="data-control btn-edit btn-cruz text-end">
+                <div *ngIf="isUserLogged" class="data-control btn-edit btn-cruz text-end">
                     <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#cursoForm" (click)="onEditCourse(i)"><i class="fas fa-edit text-warning"></i></button>
                     <button class="btn btn-right" (click)="onDeleteCourse(i)"><i class="fa-solid fa-trash-can text-warning"></i></button>
                 </div>

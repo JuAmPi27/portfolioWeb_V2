@@ -43,13 +43,13 @@
         <div *ngIf="isUserLogged" class="data-control soft-s">
             <button class="btn_modal btn btn-sm btn-warning text-dark text-end" data-bs-toggle="modal" data-bs-target="#softSkillForm" (click)="onNewSoftSkill()">Agregar soft-skill</button>
             <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-2 ms-3 text-center">Soft-Skills</h5>
-            <div class="mt-4" *ngFor="let softSkill of softSkillList; let i = index">
+            <div class="mt-5" *ngFor="let softSkill of softSkillList; let i = index">
+              <div *ngIf="isUserLogged" class="data-control text-end"> 
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#softSkillForm" (click)="onEditSoftSkill(i);"><i class="fas fa-edit text-light"></i></button>
+                <button class="btn" (click)="onDeleteSoftSkill(i);"><i class="fa-solid fa-trash-can text-light"></i></button>
+              </div>
                 <h6> {{ softSkill.nombre }} </h6>
-                <div *ngIf="isUserLogged" class="data-control text-end"> 
-                  <button class="btn" data-bs-toggle="modal" data-bs-target="#softSkillForm" (click)="onEditSoftSkill(i);"><i class="fas fa-edit text-primary"></i></button>
-                  <button class="btn" (click)="onDeleteSoftSkill(i);"><i class="fa-solid fa-trash-can text-primary"></i></button>
-                </div>
-                <div class="progress">
+               <div class="progress">
                     <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: softSkill.progreso  + '%' }" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
                     </div>
                 </div>

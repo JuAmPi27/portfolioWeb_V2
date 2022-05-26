@@ -43,16 +43,16 @@
           <div *ngIf="isUserLogged" class="data-control hard-s">
               <button class="btn_modal btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#hardSkillForm" (click)="onNewHardSkill()">Agregar hard-skill</button>
               <h5 class="h5-titulos text-decoration-underline fs-4 text-light mt-2 ms-3 text-center"> Hard-Skills</h5>
-                <div class="mt-4" *ngFor="let hardSkill of hardSkillList; let i = index">
+                <div class="mt-5" *ngFor="let hardSkill of hardSkillList; let i = index">
+                  <div *ngIf="isUserLogged" class="data-control text-end"> 
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#hardSkillForm" (click)="onEditHardSkill(i);"><i class="fas fa-edit text-light"></i></button>
+                    <button class="btn" (click)="onDeleteHardSkill(i);"><i class="fa-solid fa-trash-can text-light"></i></button>
+                  </div>
                   <h6> {{ hardSkill.nombre }} </h6>
-                <div *ngIf="isUserLogged" class="data-control text-end"> 
-                  <button class="btn" data-bs-toggle="modal" data-bs-target="#hardSkillForm" (click)="onEditHardSkill(i);"><i class="fas fa-edit text-primary"></i></button>
-                  <button class="btn" (click)="onDeleteHardSkill(i);"><i class="fa-solid fa-trash-can text-primary"></i></button>
-                </div>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">
-                      </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" [ngStyle]="{ width: hardSkill.progreso  + '%' }" aria-valuenow ="" aria-valuemin="0" aria-valuemax="100">
                     </div>
+                  </div>
                 </div>
           </div>
   </div>
