@@ -40,12 +40,14 @@ export class EducacionComponent implements OnInit {
       this.datosPortfolio.guardarNuevaEducacion(this.educationForm.value).subscribe(
         (nuevaEducacion: Educacion) => {
           this.educacionList.push(nuevaEducacion);
+          alert("Se ha guardado correctamente"); // VER SI FUNCIONA EL MENSAJE DE EXITO
         }
       ); 
     } else {
       this.datosPortfolio.modificarEducacion(this.educationForm.value).subscribe(
         () => {
           this.reloaData();
+          alert("Se ha modificado correctamente"); // VER SI FUNCIONA EL MENSAJE DE EXITO
         }
       );
     }
@@ -76,7 +78,6 @@ export class EducacionComponent implements OnInit {
   onEditEducation(index: number) {
     let educacion: Educacion = this.educacionList[index];
     this.loadForm(educacion);
-    console.log(educacion);
   }
 
   onDeleteEducation(index: number) {

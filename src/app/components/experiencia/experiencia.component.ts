@@ -25,9 +25,9 @@ export class ExperienciaComponent implements OnInit {
         empresa: ['', [Validators.required, Validators.minLength(4)]],
         cargo: ['', [Validators.required, Validators.minLength(4)]],
         pais: ['', [Validators.required, Validators.minLength(4)]],
-        comienzo: ['', [Validators.required]] ,
-        fin: ['', [Validators.required]],
-        tareas: ['', [Validators.required, Validators.minLength(4)]]
+        comienzo: ['', [Validators.required, Validators.minLength(3)]] ,
+        fin: ['', [Validators.required, Validators.minLength(3)]],
+        tareas: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]]
        });
     }
 

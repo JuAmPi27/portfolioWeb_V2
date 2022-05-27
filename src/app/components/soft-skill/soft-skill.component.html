@@ -28,11 +28,11 @@
                 </div>
               </div>
             </div>
+            <div class="modal-footer">
+              <button [disabled]="softSkillForm.invalid" type="submit" class="btn btn-warning text-dark">Guardar</button>
+              <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+            </div>
           </form>
-        </div>
-        <div class="modal-footer">
-          <button [disabled]="softSkillForm.invalid" type="submit" class="btn btn-warning text-dark">Guardar</button>
-          <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
     </div>

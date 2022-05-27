@@ -22,7 +22,7 @@ export class HardSkillComponent implements OnInit {
 
       this.hardSkillForm = this.formBuilder.group({
        id: [''],
-       nombre: ['', [Validators.required, Validators.minLength(3)]],
+       nombre: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
        progreso: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
       });
     }
@@ -37,7 +37,6 @@ export class HardSkillComponent implements OnInit {
     this.datosPortfolio.obtenerDatosHardSkill().subscribe( 
       (data) => {
       this.hardSkillList = data;
-      console.log(data); //para verificar por consola que nos llega bien la data solicitada
     });
   }
 

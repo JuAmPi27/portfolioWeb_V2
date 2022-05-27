@@ -22,10 +22,10 @@ export class CursosComponent implements OnInit {
 
       this.cursoForm = this.formBuilder.group({
        id: [''],
-       nombre: ['', [Validators.required]],
-       lugar: ['', [Validators.required]],
-       duracion: ['', [Validators.required]],
-       href: ['', [Validators.required]] 
+       nombre: ['', [Validators.required, Validators.minLength(4)]],
+       lugar: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]],
+       duracion: ['', [Validators.required, Validators.minLength(4)]],
+       href: ['', [Validators.required, Validators.minLength(4)]] 
       });
     }
 
@@ -57,6 +57,24 @@ export class CursosComponent implements OnInit {
       );
     }
   } 
+
+
+  get Nombre() {
+    return this.cursoForm.get('nombre');
+  }
+
+  get Lugar() {
+    return this.cursoForm.get('lugar');
+  }
+
+  get Duracion() {
+    return this.cursoForm.get('duracion');
+  }
+
+  get Href() {
+    return this.cursoForm.get('href');
+  }
+
 
   onNewCourse() {
     this.clearForm();
