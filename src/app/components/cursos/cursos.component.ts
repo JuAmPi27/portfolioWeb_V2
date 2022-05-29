@@ -24,8 +24,7 @@ export class CursosComponent implements OnInit {
        id: [''],
        nombre: ['', [Validators.required, Validators.minLength(4)]],
        lugar: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]],
-       duracion: ['', [Validators.required, Validators.minLength(4)]],
-       href: ['', [Validators.required, Validators.minLength(4)]] 
+       duracion: ['', [Validators.required, Validators.minLength(4)]]
       });
     }
 
@@ -71,10 +70,6 @@ export class CursosComponent implements OnInit {
     return this.cursoForm.get('duracion');
   }
 
-  get Href() {
-    return this.cursoForm.get('href');
-  }
-
 
   onNewCourse() {
     this.clearForm();
@@ -101,8 +96,7 @@ export class CursosComponent implements OnInit {
       id: '', 
       nombre: '',
       lugar: '', 
-      duracion: '',
-      href: ''
+      duracion: ''
     });
   }
 
@@ -111,8 +105,7 @@ export class CursosComponent implements OnInit {
       id: curso.id,
       nombre: curso.nombre,
       lugar: curso.lugar,
-      duracion: curso.duracion,
-      href: curso.href
+      duracion: curso.duracion
     })
   }
 

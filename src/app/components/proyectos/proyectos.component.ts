@@ -39,7 +39,6 @@ export class ProyectosComponent implements OnInit {
       this.datosPortfolio.obtenerDatosProyecto().subscribe( 
         (data) => {
         this.proyectoList = data;
-        console.log(data); //para verificar por consola que nos llega bien la data solicitada
       });
     }
 
