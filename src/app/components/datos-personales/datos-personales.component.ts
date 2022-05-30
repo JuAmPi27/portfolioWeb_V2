@@ -28,7 +28,7 @@ export class DatosPersonalesComponent implements OnInit {
        ubicacion: ['', [Validators.required, Validators.minLength(4)]],
        email: ['', [Validators.required, Validators.email]],
        tel: ['', [Validators.required, Validators.maxLength(14), Validators.minLength(10)]],
-       acercaDe: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(70)]],
+       acercaDe: ['', [Validators.required, Validators.minLength(4)]],
        img: ['', [Validators.required, Validators.minLength(5)]]
       });
     }
@@ -52,6 +52,7 @@ export class DatosPersonalesComponent implements OnInit {
       this.datosPortfolio.guardarNuevoDatosPersonales(this.datosPersonalesForm.value).subscribe(
         (nuevoDatoPersonal: DatosPersonales) => {
           this.datosPersonalesList.push(nuevoDatoPersonal);
+          alert("Los datos se han guardado correctamente"); 
         }
       );
     }
@@ -59,6 +60,7 @@ export class DatosPersonalesComponent implements OnInit {
       this.datosPortfolio.modificarDatosPersonales(this.datosPersonalesForm.value).subscribe(
         () => {
           this.reloaData();
+          alert("Los datos se han modificado correctamente"); 
         }
       );
     }

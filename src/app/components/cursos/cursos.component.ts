@@ -23,7 +23,7 @@ export class CursosComponent implements OnInit {
       this.cursoForm = this.formBuilder.group({
        id: [''],
        nombre: ['', [Validators.required, Validators.minLength(4)]],
-       lugar: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]],
+       lugar: ['', [Validators.required, Validators.minLength(4)]],
        duracion: ['', [Validators.required, Validators.minLength(4)]]
       });
     }
@@ -45,6 +45,7 @@ export class CursosComponent implements OnInit {
       this.datosPortfolio.guardarNuevoCurso(this.cursoForm.value).subscribe(
         (nuevoCurso: Curso) => {
           this.cursosList.push(nuevoCurso);
+          alert("El curso se ha guardado correctamente");
         }
       );
     }
@@ -52,6 +53,7 @@ export class CursosComponent implements OnInit {
       this.datosPortfolio.modificarCurso(this.cursoForm.value).subscribe(
         () => {
           this.reloaData();
+          alert("El curso se ha modificado correctamente");
         }
       );
     }

@@ -40,14 +40,14 @@ export class EducacionComponent implements OnInit {
       this.datosPortfolio.guardarNuevaEducacion(this.educationForm.value).subscribe(
         (nuevaEducacion: Educacion) => {
           this.educacionList.push(nuevaEducacion);
-          alert("Se ha guardado correctamente"); // VER SI FUNCIONA EL MENSAJE DE EXITO
+          alert("La educación se ha guardado correctamente"); 
         }
       ); 
     } else {
       this.datosPortfolio.modificarEducacion(this.educationForm.value).subscribe(
         () => {
           this.reloaData();
-          alert("Se ha modificado correctamente"); // VER SI FUNCIONA EL MENSAJE DE EXITO
+          alert("La educación se ha modificado correctamente"); 
         }
       );
     }

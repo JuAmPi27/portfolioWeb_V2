@@ -24,7 +24,7 @@ export class ProyectosComponent implements OnInit {
       this.proyectoForm = this.formBuilder.group({
        id: [''],
        nombre: ['', [Validators.required, Validators.minLength(4)]],
-       descripcion: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]],
+       descripcion: ['', [Validators.required, Validators.minLength(5)]],
        fechaRealizacion: ['', [Validators.required, Validators.minLength(2)]] ,
        github: ['', [Validators.required, Validators.minLength(7)]] 
       });
@@ -47,6 +47,7 @@ export class ProyectosComponent implements OnInit {
         this.datosPortfolio.guardarNuevoProyecto(this.proyectoForm.value).subscribe(
           (nuevoProyecto: Proyecto) => {
             this.proyectoList.push(nuevoProyecto);
+            alert("El proyecto se ha guardado correctamente");
           }
         );
       }
@@ -54,6 +55,7 @@ export class ProyectosComponent implements OnInit {
         this.datosPortfolio.modificarProyecto(this.proyectoForm.value).subscribe(
           () => {
             this.reloaData();
+            alert("El proyecto se ha modificado correctamente");
           }
         );
       }

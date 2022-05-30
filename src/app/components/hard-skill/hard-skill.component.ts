@@ -22,7 +22,7 @@ export class HardSkillComponent implements OnInit {
 
       this.hardSkillForm = this.formBuilder.group({
        id: [''],
-       nombre: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
+       nombre: ['', [Validators.required, Validators.minLength(2)]],
        progreso: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
       });
     }
@@ -45,6 +45,7 @@ export class HardSkillComponent implements OnInit {
       this.datosPortfolio.guardarNuevaHardSkill(this.hardSkillForm.value).subscribe(
         (nuevaHardSkill: HardSkill) => {
           this.hardSkillList.push(nuevaHardSkill);
+          alert("Hard-skill guardada correctamente");
         }
       );
     }
@@ -52,6 +53,7 @@ export class HardSkillComponent implements OnInit {
       this.datosPortfolio.modificarHardSkill(this.hardSkillForm.value).subscribe(
         () => {
           this.reloaData();
+          alert("Hard-skill modificada correctamente");
         }
       );
     }

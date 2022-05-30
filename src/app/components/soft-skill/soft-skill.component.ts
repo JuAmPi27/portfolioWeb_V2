@@ -22,7 +22,7 @@ export class SoftSkillComponent implements OnInit {
 
       this.softSkillForm = this.formBuilder.group({
        id: [''],
-       nombre: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
+       nombre: ['', [Validators.required, Validators.minLength(2)]],
        progreso: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
       });
     }
@@ -45,6 +45,7 @@ export class SoftSkillComponent implements OnInit {
       this.datosPortfolio.guardarNuevaSoftSkill(this.softSkillForm.value).subscribe(
         (nuevaSoftSkill: SoftSkill) => {
           this.softSkillList.push(nuevaSoftSkill);
+          alert("Soft-skill guardada correctamente");
         }
       );
     }
@@ -52,6 +53,7 @@ export class SoftSkillComponent implements OnInit {
       this.datosPortfolio.modificarSoftSkill(this.softSkillForm.value).subscribe(
         () => {
           this.reloaData();
+          alert("Soft-skill modificada correctamente");
         }
       );
     }

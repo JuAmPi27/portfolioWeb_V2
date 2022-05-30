@@ -27,7 +27,7 @@ export class ExperienciaComponent implements OnInit {
         pais: ['', [Validators.required, Validators.minLength(4)]],
         comienzo: ['', [Validators.required, Validators.minLength(3)]] ,
         fin: ['', [Validators.required, Validators.minLength(3)]],
-        tareas: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]]
+        tareas: ['', [Validators.required, Validators.minLength(4)]]
        });
     }
 
@@ -48,6 +48,7 @@ export class ExperienciaComponent implements OnInit {
       this.datosPortfolio.guardarNuevaExperiencia(this.experienciaForm.value).subscribe(
         (nuevaExperiencia: Experiencia) => {
           this.experienciaList.push(nuevaExperiencia);
+          alert("La experiencia profesional se ha guardado correctamente");
         }
       );
     }
@@ -55,6 +56,7 @@ export class ExperienciaComponent implements OnInit {
       this.datosPortfolio.modificarExperiencia(this.experienciaForm.value).subscribe(
         () => {
           this.reloaData();
+          alert("La experiencia profesional se ha modificado correctamente");
         }
       );
     }
