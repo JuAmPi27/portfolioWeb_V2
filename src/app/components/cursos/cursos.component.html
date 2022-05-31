@@ -10,43 +10,43 @@
         </div>
         <div class="modal-body">
           <form [formGroup]="cursoForm" (ngSubmit)="onSubmit()">
+            
             <input type="hidden" name="id" formControlName="id">
             
             <div class="mb-3">
-              <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
-              <div class="col-sm-10">
-                <input type="text" name="nombre" formControlName="nombre" class="form-control" [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid': !Nombre?.errors && Nombre?.touched}">
-                <div *ngIf="Nombre?.errors && Nombre?.touched">
-                  <p *ngIf="Nombre?.hasError('required')" class="text-danger">El Nombre es requerido!</p>
+                <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="nombre" formControlName="nombre" class="form-control" [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid': !Nombre?.errors && Nombre?.touched}">
+                    <div *ngIf="Nombre?.errors && Nombre?.touched">
+                        <p *ngIf="Nombre?.hasError('required')" class="text-danger">El Nombre es requerido!</p>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="mb-3">
-              <label for="lugar" class="col-sm-2 col-form-label">Lugar:</label>
-              <div class="col-sm-10">
-                <input type="text" name="lugar" formControlName="lugar" class="form-control" [ngClass]="{'is-invalid': Lugar?.errors && Lugar?.touched, 'is-valid': !Lugar?.errors && Lugar?.touched}">
-                <div *ngIf="Lugar?.errors && Lugar?.touched">
-                  <p *ngIf="Lugar?.hasError('required')" class="text-danger">El lugar es requerido!</p>
+                <label for="lugar" class="col-sm-2 col-form-label">Lugar:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="lugar" formControlName="lugar" class="form-control" [ngClass]="{'is-invalid': Lugar?.errors && Lugar?.touched, 'is-valid': !Lugar?.errors && Lugar?.touched}">
+                    <div *ngIf="Lugar?.errors && Lugar?.touched">
+                        <p *ngIf="Lugar?.hasError('required')" class="text-danger">El lugar es requerido!</p>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="mb-3">
-              <label for="duracion" class="col-sm-2 col-form-label">Duración (Hs):</label>
-              <div class="col-sm-10">
-                <input type="text" name="duracion" formControlName="duracion" class="form-control" [ngClass]="{'is-invalid': Duracion?.errors && Duracion?.touched, 'is-valid': !Duracion?.errors && Duracion?.touched}">
-                <div *ngIf="Duracion?.errors && Duracion?.touched">
-                  <p *ngIf="Duracion?.hasError('required')" class="text-danger">La duración del mismo es requerida!</p>
+                <label for="duracion" class="col-sm-2 col-form-label">Duración (Hs):</label>
+                <div class="col-sm-10">
+                    <input type="text" name="duracion" formControlName="duracion" class="form-control" [ngClass]="{'is-invalid': Duracion?.errors && Duracion?.touched, 'is-valid': !Duracion?.errors && Duracion?.touched}">
+                    <div *ngIf="Duracion?.errors && Duracion?.touched">
+                        <p *ngIf="Duracion?.hasError('required')" class="text-danger">La duración del mismo es requerida!</p>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-warning text-dark">Guardar</button>
-              <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-warning text-dark">Guardar</button>
+                <button type="button" class="btn btn-dark text-warning" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </form>
         </div>
-       
-      </div>
+     </div>
     </div>
   </div>
 

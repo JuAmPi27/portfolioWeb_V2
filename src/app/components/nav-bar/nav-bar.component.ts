@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -13,8 +12,7 @@ export class NavBarComponent implements OnInit {
   isUserLogged: Boolean = false;
 
   constructor(
-    private authService: AuthService,
-    private router: Router) { }
+    private authService: AuthService) { }
 
   ngOnInit(): void {
     this.isUserLogged = this.authService.isUserLogged();
@@ -23,7 +21,6 @@ export class NavBarComponent implements OnInit {
   logout(): void {
     this.authService.logout();
     this.isUserLogged = false;
-    this.router.navigate(['/inicio']);
     window.location.reload();
   }
 

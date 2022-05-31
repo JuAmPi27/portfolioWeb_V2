@@ -92,7 +92,8 @@
       </div>
     </div>
   </div>
-    <div *ngFor="let datoPersonal of datosPersonalesList; let i = index" class="tarjeta-datos px-4 py-4 my-4">
+    
+  <div *ngFor="let datoPersonal of datosPersonalesList; let i = index" class="tarjeta-datos px-4 py-4 my-4">
         <div *ngIf="isUserLogged" class="data-control">
             <button class="btn_modal btn btn-sm btn-dark text-warning mb-3 mt-2" data-bs-toggle="modal" data-bs-target="#datosPersonalesForm" (click)="onNewDatoPersonal()">Agregar datos personales</button> 
         </div>

@@ -10,7 +10,8 @@ import { LoginDto } from 'src/assets/data/loginDto';
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient) { }
 
   public login(credentials: LoginDto) : Observable<Boolean> {
     return this.http.post<Boolean> (config.baseUrl + "login", credentials).pipe(
