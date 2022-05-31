@@ -33,12 +33,11 @@ export class LoginComponent implements OnInit {
   
   onSubmit(event: Event) {
     event.preventDefault;
-
     this.authService.login(this.formLogin.value).subscribe(
       (response: Boolean) => {
-        if (response)
+        if (response) 
           this.router.navigate(['/inicio']);
-        else
+        else 
           this.loginError = true;
       }
     );

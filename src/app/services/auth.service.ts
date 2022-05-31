@@ -18,6 +18,7 @@ export class AuthService {
       tap((response: Boolean) => {
         if (response)
           sessionStorage.setItem("user", "jpbarnetche27");
+          window.location.reload();
       })
     );
   }
